@@ -9,3 +9,4 @@ firefox
 vim
 fzf
 fd
+stow
