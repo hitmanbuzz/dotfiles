@@ -1,0 +1,4 @@
+inherits = "zed_onedark"
+
+"ui.background" = { bg = "#1a1a1a" }  # or any darker color like #0d0d0d, #000000
+

@@ -1,0 +1,4 @@
+inherits = "rose_pine"
+
+[palette]
+base = "#0f0f0f"  # Very dark gray

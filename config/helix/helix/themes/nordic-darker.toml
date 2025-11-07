@@ -1,0 +1,236 @@
+# Nordic theme for Helix Editor
+# Based on nordic.nvim by AlexvZyl
+# GitHub: https://github.com/AlexvZyl/nordic.nvim
+# 
+# A Neovim colorscheme based on Nord, but Aurora > Frost
+# Warmer and darker implementation with prominent Aurora colors
+# Using black0 (#191D24) as main background for a darker experience
+
+# Interface
+"ui.background" = { bg = "black0" }
+"ui.background.separator" = { fg = "gray3" }
+"ui.text" = { fg = "white0" }
+"ui.text.focus" = { fg = "white1", modifiers = ["bold"] }
+"ui.text.inactive" = { fg = "gray4" }
+"ui.text.info" = { fg = "blue1" }
+"ui.text.directory" = { fg = "cyan_base" }
+
+# Cursor and selection
+"ui.cursor" = { bg = "white1", fg = "black0" }
+"ui.cursor.primary" = { bg = "white2", fg = "black0" }
+"ui.cursor.match" = { bg = "gray3", fg = "yellow_base" }
+"ui.cursor.insert" = { bg = "green_base", fg = "black0" }
+"ui.cursor.select" = { bg = "blue1", fg = "black0" }
+"ui.selection" = { bg = "gray2" }
+"ui.selection.primary" = { bg = "gray3" }
+"ui.cursorline.primary" = { bg = "black1" }
+"ui.highlight" = { bg = "gray2" }
+
+# Line numbers
+"ui.linenr" = { fg = "gray4" }
+"ui.linenr.selected" = { fg = "white1", modifiers = ["bold"] }
+
+# Virtual/invisible text
+"ui.virtual" = { fg = "gray4" }
+"ui.virtual.ruler" = { bg = "black1" }
+"ui.virtual.whitespace" = { fg = "gray3" }
+"ui.virtual.indent-guide" = { fg = "gray3" }
+"ui.virtual.inlay-hint" = { fg = "gray5" }
+"ui.virtual.jump-label" = { fg = "red_bright", modifiers = ["bold"] }
+"ui.virtual.wrap" = { fg = "gray4" }
+
+# Statusline
+"ui.statusline" = { fg = "white1", bg = "black2" }
+"ui.statusline.inactive" = { fg = "gray4", bg = "black1" }
+"ui.statusline.normal" = { fg = "black0", bg = "blue1", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "black0", bg = "green_base", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "black0", bg = "magenta_base", modifiers = ["bold"] }
+"ui.statusline.separator" = { fg = "gray3" }
+
+# Bufferline/tabs
+"ui.bufferline" = { fg = "gray5", bg = "black1" }
+"ui.bufferline.active" = { fg = "white1", bg = "black2", modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "black0" }
+
+# Popups and menus
+"ui.popup" = { fg = "white0", bg = "gray1" }
+"ui.popup.info" = { fg = "white0", bg = "gray1" }
+"ui.window" = { fg = "gray3" }
+"ui.help" = { fg = "white1", bg = "gray1" }
+
+"ui.menu" = { fg = "white0", bg = "gray1" }
+"ui.menu.selected" = { fg = "black0", bg = "blue1", modifiers = ["bold"] }
+"ui.menu.scroll" = { fg = "white1", bg = "gray3" }
+
+# Diagnostics
+"diagnostic.error" = { underline = { color = "red_base", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "yellow_base", style = "curl" } }
+"diagnostic.info" = { underline = { color = "blue1", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "cyan_base", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+"error" = { fg = "red_base" }
+"warning" = { fg = "yellow_base" }
+"info" = { fg = "blue1" }
+"hint" = { fg = "cyan_base" }
+
+# Diffs
+"diff.plus" = { fg = "green_base" }
+"diff.plus.gutter" = { fg = "green_dim" }
+"diff.minus" = { fg = "red_base" }
+"diff.minus.gutter" = { fg = "red_dim" }
+"diff.delta" = { fg = "blue1" }
+"diff.delta.gutter" = { fg = "blue0" }
+
+# Git
+"git.delta.moved" = { fg = "magenta_base" }
+
+# Syntax highlighting
+"attribute" = { fg = "yellow_base" }
+"type" = { fg = "yellow_base" }
+"type.builtin" = { fg = "yellow_base" }
+"type.enum.variant" = { fg = "cyan_base" }
+
+"constructor" = { fg = "cyan_base" }
+
+"constant" = { fg = "magenta_base" }
+"constant.builtin" = { fg = "magenta_base" }
+"constant.builtin.boolean" = { fg = "blue1" }
+"constant.character" = { fg = "green_base" }
+"constant.character.escape" = { fg = "orange_base" }
+"constant.numeric" = { fg = "magenta_base" }
+
+"string" = { fg = "green_base" }
+"string.regexp" = { fg = "orange_base" }
+"string.special" = { fg = "orange_base" }
+"string.special.path" = { fg = "green_base" }
+"string.special.url" = { fg = "cyan_base", modifiers = ["underlined"] }
+"string.special.symbol" = { fg = "magenta_base" }
+
+"comment" = { fg = "gray5", modifiers = ["italic"] }
+"comment.documentation" = { fg = "gray5", modifiers = ["italic"] }
+
+"variable" = { fg = "white0" }
+"variable.builtin" = { fg = "cyan_base" }
+"variable.parameter" = { fg = "white1" }
+"variable.other.member" = { fg = "cyan_base" }
+
+"label" = { fg = "cyan_base" }
+
+"punctuation" = { fg = "white1" }
+"punctuation.delimiter" = { fg = "white1" }
+"punctuation.bracket" = { fg = "white1" }
+"punctuation.special" = { fg = "orange_base" }
+
+"keyword" = { fg = "blue1" }
+"keyword.control" = { fg = "blue1" }
+"keyword.control.conditional" = { fg = "blue1" }
+"keyword.control.repeat" = { fg = "blue1" }
+"keyword.control.import" = { fg = "blue1" }
+"keyword.control.return" = { fg = "blue1" }
+"keyword.control.exception" = { fg = "blue1" }
+"keyword.operator" = { fg = "blue1" }
+"keyword.directive" = { fg = "blue0" }
+"keyword.function" = { fg = "blue1" }
+"keyword.storage" = { fg = "blue1" }
+"keyword.storage.type" = { fg = "blue1" }
+"keyword.storage.modifier" = { fg = "blue1" }
+
+"operator" = { fg = "blue1" }
+
+"function" = { fg = "blue2" }
+"function.builtin" = { fg = "blue2" }
+"function.method" = { fg = "blue2" }
+"function.macro" = { fg = "blue0" }
+"function.special" = { fg = "blue2" }
+
+"tag" = { fg = "blue1" }
+"tag.builtin" = { fg = "blue1" }
+
+"namespace" = { fg = "white0" }
+"special" = { fg = "orange_base" }
+"module" = { fg = "cyan_base" }
+
+# Markup (Markdown, etc.)
+"markup.heading" = { fg = "blue1", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "blue1", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "cyan_base", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "green_base", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "yellow_base", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "orange_base", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "magenta_base", modifiers = ["bold"] }
+"markup.heading.marker" = { fg = "gray5" }
+
+"markup.list" = { fg = "blue1" }
+"markup.list.checked" = { fg = "green_base" }
+"markup.list.unchecked" = { fg = "gray5" }
+
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+
+"markup.link.url" = { fg = "cyan_base", modifiers = ["underlined"] }
+"markup.link.text" = { fg = "blue2" }
+"markup.link.label" = { fg = "magenta_base" }
+
+"markup.quote" = { fg = "gray5", modifiers = ["italic"] }
+"markup.raw" = { fg = "green_base" }
+"markup.raw.inline" = { fg = "green_base" }
+"markup.raw.block" = { fg = "green_base" }
+
+# Color palette
+[palette]
+# Blacks - Not in base Nord (darker backgrounds)
+black0 = "#191D24"  # Main background - darkest
+black1 = "#1E222A"  # Slightly lighter
+black2 = "#222630"  # Statusline/lighter UI elements
+
+# Grays
+gray0 = "#242933"  # Alternative lighter bg
+gray1 = "#2E3440"  # Polar Night - popups
+gray2 = "#3B4252"  # Selection
+gray3 = "#434C5E"  # Primary selection
+gray4 = "#4C566A"  # Line numbers
+gray5 = "#60728A"  # Comments - light blue/gray
+
+# Whites
+white0 = "#C0C8D8"  # default fg with reduced blue tint
+white1 = "#D8DEE9"  # Snow storm
+white2 = "#E5E9F0"  # Brighter white
+white3 = "#ECEFF4"  # Brightest white
+
+# Frost
+blue0 = "#5E81AC"
+blue1 = "#81A1C1"
+blue2 = "#88C0D0"
+
+# Cyan
+cyan_base = "#8FBCBB"
+cyan_bright = "#9FC6C5"
+cyan_dim = "#80B3B2"
+
+# Aurora - Red
+red_base = "#BF616A"
+red_bright = "#C5727A"
+red_dim = "#B74E58"
+
+# Aurora - Orange
+orange_base = "#D08770"
+orange_bright = "#D79784"
+orange_dim = "#CB775D"
+
+# Aurora - Yellow
+yellow_base = "#EBCB8B"
+yellow_bright = "#EFD49F"
+yellow_dim = "#E7C173"
+
+# Aurora - Green
+green_base = "#A3BE8C"
+green_bright = "#B1C89D"
+green_dim = "#97B67C"
+
+# Aurora - Magenta
+magenta_base = "#B48EAD"
+magenta_bright = "#BE9DB8"
+magenta_dim = "#A97EA1"

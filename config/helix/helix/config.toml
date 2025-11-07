@@ -1,0 +1,31 @@
+theme = "rose-pine-dark"
+
+[editor]
+line-number = "relative"
+mouse = true
+true-color = true
+auto-format = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+# git-ignore = false
+# git-global = false
+# git-exclude = false
+# ignore = false
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+diagnostics = ["warning", "error"]
+workspace-diagnostics = ["warning", "error"]
+
