@@ -1,0 +1,13 @@
+git
+waybar
+rofi
+alacritty
+helix
+btop
+tmux
+firefox
+vim
+fzf
+fd
+stow
+cmake
