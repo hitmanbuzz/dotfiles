@@ -11,3 +11,4 @@ fzf
 fd
 stow
 cmake
+pavucontrol
