@@ -1,10 +1,16 @@
 [[language]]
 name = "go"
 auto-format = false
+indent = { tab-width = 4, unit = "    "}
 
 [[language]]
 name = "rust"
 auto-format = false
+indent = { tab-width = 4, unit = "    "}
+
+[[language]]
+name = "cmake"
+language-servers = ["cmake-language-server"]
 
 [[language]]
 name = "c"
@@ -18,3 +24,12 @@ indent = { tab-width = 4, unit = "    "}
 
 [language-server.gopls.config]
 gofumpt = false
+
+[language-server.godot]
+command = "ncat"
+args = ["127.0.0.1", "6005"]
+
+[[language]]
+name = "gdscript"
+language-servers = ["godot"]
+
