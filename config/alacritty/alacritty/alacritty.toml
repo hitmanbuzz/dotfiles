@@ -27,10 +27,3 @@ blur = true
 
 [colors]
 transparent_background_colors = true
-
-[keyboard]
-bindings = [
-{ key = "F11", action = "ToggleFullscreen" },
-{ key = "Insert", mods = "Shift", action = "Paste" },
-{ key = "Insert", mods = "Control", action = "Copy" }
-]

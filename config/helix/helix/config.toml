@@ -6,6 +6,9 @@ mouse = true
 true-color = true
 auto-format = false
 
+[editor.lsp]
+display-progress-messages = true
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
@@ -19,10 +22,10 @@ hidden = false
 # ignore = false
 
 [editor.statusline]
-left = ["mode", "spinner"]
+left = ["mode", "separator", "version-control", "spinner", "file-modification-indicator", "read-only-indicator"]
 center = ["file-name"]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
-separator = "│"
+separator = "│ "
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
