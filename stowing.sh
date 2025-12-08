@@ -1,5 +1,14 @@
 #!/bin/bash
 
-# Add the config directory at the end of the command
+configs=(
+    helix
+    hypr
+    waybar
+    alacritty
+    root-configs
+    tmux
+    fastfetch
+)
 
-stow -d config -t ~/.config helix hypr waybar alacritty root-configs tmux
+# Stow all configs
+stow -d config -t ~/.config "${configs[@]}"
