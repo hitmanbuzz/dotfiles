@@ -2,5 +2,4 @@
 
 # Add the config directory at the end of the command
 
-stow -t ~/.config helix hypr waybar alacritty root-configs
-
+stow -d config -t ~/.config helix hypr waybar alacritty root-configs tmux
