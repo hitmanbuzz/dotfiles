@@ -22,6 +22,16 @@ name = "cpp"
 auto-format = false
 indent = { tab-width = 4, unit = "    "}
 
+[[language]]
+name = "javascript"
+auto-format = false
+indent = { tab-width = 4, unit = "    "}
+
+[[language]]
+name = "typescript"
+auto-format = false
+indent = { tab-width = 4, unit = "    "}
+
 [language-server.gopls.config]
 gofumpt = false
 
