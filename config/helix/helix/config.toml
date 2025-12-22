@@ -22,7 +22,7 @@ hidden = false
 # ignore = false
 
 [editor.statusline]
-left = ["mode", "separator", "version-control", "spinner", "file-modification-indicator", "read-only-indicator"]
+left = ["mode", "separator", "version-control", "spacer", "separator", "spinner", "file-modification-indicator", "read-only-indicator"]
 center = ["file-name"]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 separator = "│ "
