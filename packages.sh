@@ -64,6 +64,11 @@ official_packages=(
     "typescript-language-server"
 
     # Normal Packages
+    "hyprpolkitagent"
+    "polkit-gnome"
+    "polkit-kde-agent"
+    "ntfs-3g"
+    "gnome-disk-utility"
     "pavucontrol"
     "tree"
     "starship"
