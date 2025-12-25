@@ -53,6 +53,7 @@ echo ""
 official_packages=(
     # Game
     "steam"
+    "lutris"
 
     # FONTS
     "ttf-jetbrains-mono-nerd"
@@ -120,7 +121,6 @@ vlc_plugins=(
 # AUR packages (requires yay)
 aur_packages=(
     "warp-cli"
-    "wine-stable"
 )
 
 # Update package database
