@@ -73,6 +73,8 @@ official_packages=(
     "go"
 
     # Normal Packages
+    "fzf"
+    "fd"
     "gvfs"
     "gvfs-afc"
     "thunar-volman"
