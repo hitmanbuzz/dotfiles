@@ -62,6 +62,11 @@ official_packages=(
     "vscode-html-languageserver"
     "vscode-css-languageserver"
     "typescript-language-server"
+    "gopls"
+    "clang"
+
+    # Language
+    "go"
 
     # Normal Packages
     "gvfs"
