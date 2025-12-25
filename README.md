@@ -1,6 +1,6 @@
 # **My Arch Linux Dotfiles**
 
-> *My simple arch linux config/dotfiles (some configs are from omarchy)*
+> *My simple arch linux config/dotfiles*
 
 #### NOTE:
 > Run `packages.sh` script first then run `stowing.sh` later.

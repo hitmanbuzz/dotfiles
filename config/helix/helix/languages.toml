@@ -32,6 +32,21 @@ name = "typescript"
 auto-format = false
 indent = { tab-width = 4, unit = "    "}
 
+[[language]]
+name = "json"
+auto-format = false
+indent = { tab-width = 4, unit = "    "}
+
+[[language]]
+name = "jsonc"
+auto-format = false
+indent = { tab-width = 4, unit = "    "}
+
+[[language]]
+name = "css"
+auto-format = false
+indent = { tab-width = 4, unit = "    "}
+
 [language-server.gopls.config]
 gofumpt = false
 

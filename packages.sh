@@ -50,18 +50,38 @@ install_yay() {
 echo "=== Arch Linux Package Installer ==="
 echo ""
 
-# Array of official repo packages
 official_packages=(
+    # FONTS
+    "ttf-jetbrains-mono-nerd"
+    "ttf-dejavu"
+    "noto-fonts"
+    "noto-fonts-cjk"
+    "noto-fonts-emoji"
+
+    # LSP
+    "vscode-html-languageserver"
+    "vscode-css-languageserver"
+    "typescript-language-server"
+
+    # Normal Packages
+    "pavucontrol"
+    "tree"
+    "starship"
+    "fastfetch"
+    "unzip"
+    "git"
+    "less"
+    "firefox"
+    "waybar"
     "stow"
     "tmux"
-    "alacritty"
+    "kitty"
     "gcc"
     "helix"
     "vlc"
     "thunar"
 )
 
-# VLC plugins for comprehensive media support
 vlc_plugins=(
     "vlc-plugin-ffmpeg"      # Essential for most codecs
     "vlc-plugin-fluidsynth"
@@ -77,7 +97,7 @@ vlc_plugins=(
 
 # AUR packages (requires yay)
 aur_packages=(
-    "microsoft-edge-stable-bin"
+    "warp-cli"
 )
 
 # Update package database

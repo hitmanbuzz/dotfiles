@@ -1,14 +1,20 @@
 #!/bin/bash
 
+CONFIG_DIR="$HOME/.config"
+
 configs=(
     helix
-    hypr
+    # hypr
     waybar
-    alacritty
+    kitty
     root-configs
     tmux
     fastfetch
 )
 
-# Stow all configs
-stow -d config -t ~/.config "${configs[@]}"
+# Make symlink for all configs
+stow -d config -t "$CONFIG_DIR" "${configs[@]}"
+echo "Config Symlink Done"
+
+source ~/.bashrc
+echo "Sourcing bashrc Done"
