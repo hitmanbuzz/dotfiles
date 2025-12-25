@@ -13,3 +13,5 @@ eval "$(starship init bash)"
 alias ll="ls -l"
 PS1='[\u@\h \W]\$ '
 . "$HOME/.cargo/env"
+
+export PATH=$PATH:$(go env GOPATH)/bin
