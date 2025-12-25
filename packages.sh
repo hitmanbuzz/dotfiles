@@ -51,6 +51,9 @@ echo "=== Arch Linux Package Installer ==="
 echo ""
 
 official_packages=(
+    # Game
+    "steam"
+
     # FONTS
     "ttf-jetbrains-mono-nerd"
     "ttf-dejavu"
@@ -117,6 +120,7 @@ vlc_plugins=(
 # AUR packages (requires yay)
 aur_packages=(
     "warp-cli"
+    "wine-stable"
 )
 
 # Update package database

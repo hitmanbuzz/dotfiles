@@ -5,6 +5,8 @@
 #### NOTE:
 > Run `packages.sh` script first then run `stowing.sh` later.
 
+- Enable `mulitlib` in `etc/pacman.conf`
+
 ### Install Packages
 ```
 chmod +x packages.sh
