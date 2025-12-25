@@ -16,5 +16,8 @@ configs=(
 stow -d config -t "$CONFIG_DIR" "${configs[@]}"
 echo "Config Symlink Done"
 
+stow -d config -t "$HOME" bash
+echo ".bashrc Symlink Done"
+
 source ~/.bashrc
 echo "Sourcing bashrc Done"
