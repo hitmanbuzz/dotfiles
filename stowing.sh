@@ -4,7 +4,7 @@ CONFIG_DIR="$HOME/.config"
 
 configs=(
     helix
-    # hypr
+    hypr
     waybar
     kitty
     root-configs
