@@ -64,6 +64,12 @@ official_packages=(
     "typescript-language-server"
 
     # Normal Packages
+    "gvfs"
+    "gvfs-afc"
+    "thunar-volman"
+    "tumbler"
+    "ffmpegthumbnailer"
+    "udisks2"
     "hyprpolkitagent"
     "polkit-gnome"
     "polkit-kde-agent"
