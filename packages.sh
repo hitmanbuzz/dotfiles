@@ -24,8 +24,11 @@ official_packages=(
     # Language
     "go"
 
-    # Normal Packages
+    # Hyprland
+    "hyprlauncher"
     "hyprpaper"
+
+    # Normal Packages
     "fzf"
     "fd"
     "gvfs"
