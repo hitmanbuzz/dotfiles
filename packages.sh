@@ -30,6 +30,7 @@ official_packages=(
 
     # Normal Packages
     "snapper"
+    "snap-pac"
     "fzf"
     "fd"
     "gvfs"
