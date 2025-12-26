@@ -1,5 +1,83 @@
 #!/bin/bash
 
+
+# Official Arch Package
+official_packages=(
+    # Game
+    "steam"
+    "lutris"
+
+    # FONTS
+    "ttf-jetbrains-mono-nerd"
+    "ttf-dejavu"
+    "noto-fonts"
+    "noto-fonts-cjk"
+    "noto-fonts-emoji"
+
+    # LSP
+    "vscode-html-languageserver"
+    "vscode-css-languageserver"
+    "typescript-language-server"
+    "gopls"
+    "clang"
+
+    # Language
+    "go"
+
+    # Normal Packages
+    "hyprpaper"
+    "fzf"
+    "fd"
+    "gvfs"
+    "gvfs-afc"
+    "thunar-volman"
+    "tumbler"
+    "ffmpegthumbnailer"
+    "udisks2"
+    "hyprpolkitagent"
+    "polkit-gnome"
+    "polkit-kde-agent"
+    "slurp"
+    "swappy"
+    "grim"
+    "ntfs-3g"
+    "gnome-disk-utility"
+    "pavucontrol"
+    "tree"
+    "starship"
+    "fastfetch"
+    "unzip"
+    "git"
+    "less"
+    "firefox"
+    "waybar"
+    "stow"
+    "tmux"
+    "kitty"
+    "gcc"
+    "helix"
+    "vlc"
+    "thunar"
+)
+
+# AUR packages (requires yay)
+aur_packages=(
+    "warp-cli"
+)
+
+vlc_plugins=(
+    "vlc-plugin-ffmpeg"      # Essential for most codecs
+    "vlc-plugin-fluidsynth"
+    "vlc-plugin-gme"
+    "vlc-plugin-jack"
+    "vlc-plugin-svg"
+    "vlc-plugin-tag"
+    "vlc-plugin-twolame"
+    "vlc-plugin-vorbis"
+    "vlc-plugin-x264"
+    "vlc-plugin-x265"
+)
+
 # Color codes for output
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -50,80 +128,6 @@ install_yay() {
 echo "=== Arch Linux Package Installer ==="
 echo ""
 
-official_packages=(
-    # Game
-    "steam"
-    "lutris"
-
-    # FONTS
-    "ttf-jetbrains-mono-nerd"
-    "ttf-dejavu"
-    "noto-fonts"
-    "noto-fonts-cjk"
-    "noto-fonts-emoji"
-
-    # LSP
-    "vscode-html-languageserver"
-    "vscode-css-languageserver"
-    "typescript-language-server"
-    "gopls"
-    "clang"
-
-    # Language
-    "go"
-
-    # Normal Packages
-    "fzf"
-    "fd"
-    "gvfs"
-    "gvfs-afc"
-    "thunar-volman"
-    "tumbler"
-    "ffmpegthumbnailer"
-    "udisks2"
-    "hyprpolkitagent"
-    "polkit-gnome"
-    "polkit-kde-agent"
-    "slurp"
-    "swappy"
-    "grim"
-    "ntfs-3g"
-    "gnome-disk-utility"
-    "pavucontrol"
-    "tree"
-    "starship"
-    "fastfetch"
-    "unzip"
-    "git"
-    "less"
-    "firefox"
-    "waybar"
-    "stow"
-    "tmux"
-    "kitty"
-    "gcc"
-    "helix"
-    "vlc"
-    "thunar"
-)
-
-vlc_plugins=(
-    "vlc-plugin-ffmpeg"      # Essential for most codecs
-    "vlc-plugin-fluidsynth"
-    "vlc-plugin-gme"
-    "vlc-plugin-jack"
-    "vlc-plugin-svg"
-    "vlc-plugin-tag"
-    "vlc-plugin-twolame"
-    "vlc-plugin-vorbis"
-    "vlc-plugin-x264"
-    "vlc-plugin-x265"
-)
-
-# AUR packages (requires yay)
-aur_packages=(
-    "warp-cli"
-)
 
 # Update package database
 echo -e "${YELLOW}[→]${NC} Updating package database..."
