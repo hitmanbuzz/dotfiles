@@ -1,14 +1,18 @@
 * {
-    font-family: sans;
-    font-size: 13px;
+    font-family: "knight warrior", Roboto;
+    font-size: 14px;
+    letter-spacing: 1.5px;
     min-height: 0;
 }
 
 window#waybar {
-    background: transparent;
+    background-color: #000000; 
+    
+    border-bottom: 2px solid #1dc706; 
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
+    /* font-weight: bold; */
 }
 
 window#waybar.hidden {
@@ -41,18 +45,20 @@ button:hover {
 
 #workspaces button {
     padding: 0 4px;
+    background: transparent;
+    color: #ffffff; 
 }
 
 #workspaces button.focused {
-    background-color: rgba(0, 0, 0, 0.3);
     color: #f50707;
     border-top: 2px solid #c9545d;
 }
 
 #workspaces button.active {
-    background-color: rgba(0, 0, 0, 0.3);
     color: #f50707;
-    border-top: 2px solid #f50707;
+    background-color: transparent;
+    font-weight: bold;
+    border-bottom: 2px solid #f50707; 
 }
 
 #workspaces button.urgent {
@@ -70,7 +76,7 @@ button:hover {
     margin: 2px;
     padding-left: 4px;
     padding-right: 4px;
-    background-color: rgba(0, 0, 0, 0.3);
+    /* background-color: rgba(0, 0, 0, 0.3); */
     color: #ffffff;
 }
 
@@ -105,23 +111,17 @@ label:focus {
 }
 
 #network {
-    /* 1. Explicitly remove padding to prevent vertical stretching */
     padding: 0;
 
-    /* 2. Define the exact box size */
     min-width: 14px;
     min-height: 14px;
     
-    /* 3. Force the invisible text to be tiny so it doesn't push the box open */
     font-size: 1px; 
     
-    /* 4. Perfect Circle */
     border-radius: 50%;
     
-    /* 5. Colors */
     background-color: #2ecc71;
     color: transparent;
     
-    /* 6. Alignment */
     margin: 8px 10px; /* Adjust top/bottom margin to center vertically */
 }

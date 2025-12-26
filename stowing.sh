@@ -8,6 +8,7 @@ configs=(
     waybar
     kitty
     root-configs
+    fontconfig
     tmux
     fastfetch
     swappy
