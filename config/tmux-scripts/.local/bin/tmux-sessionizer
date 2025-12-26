@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+# 1. Select directory using fzf
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+    # CHANGED HERE:
+    # -maxdepth 3: Looks 3 folders deep (adjust this number if you need more depth)
+    # -mindepth 1: Skips the root folder itself (e.g., just "/home/user")
+    # You can add more paths after ~/Projects if you want
+    selected=$(find ~/ ~/Projects -mindepth 1 -maxdepth 3 -type d 2> /dev/null | fzf)
+fi
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+# 2. Extract the directory name for the session name
+# This takes the folder name (e.g., "backend") and replaces dots with underscores
+session_name=$(basename "$selected" | tr . _)
+
+# 3. Check if session exists
+tmux_running=$(pgrep tmux)
+
+# If tmux isn't running at all, create new session and attach
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux new-session -s "$session_name" -c "$selected"
+    exit 0
+fi
+
+# If session doesn't exist, create it (detached)
+if ! tmux has-session -t="$session_name" 2> /dev/null; then
+    tmux new-session -ds "$session_name" -c "$selected"
+fi
+
+# 4. Switch to the session
+if [[ -z $TMUX ]]; then
+    tmux attach-session -t "$session_name"
+else
+    tmux switch-client -t "$session_name"
+fi

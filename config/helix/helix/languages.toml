@@ -47,6 +47,11 @@ name = "css"
 auto-format = false
 indent = { tab-width = 4, unit = "    "}
 
+[[language]]
+name = "html"
+auto-format = false
+indent = { tab-width = 4, unit = "    "}
+
 [language-server.gopls.config]
 gofumpt = false
 

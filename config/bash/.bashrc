@@ -14,4 +14,8 @@ alias ll="ls -l"
 PS1='[\u@\h \W]\$ '
 . "$HOME/.cargo/env"
 
+# Bind Ctrl+T to run the sessionizer script
+bind '"\C-t":"tmux-sessionizer\n"'
+
 export PATH=$PATH:$(go env GOPATH)/bin
+export PATH="$HOME/.local/bin:$PATH"
