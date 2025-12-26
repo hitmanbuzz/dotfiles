@@ -29,6 +29,7 @@ official_packages=(
     "hyprpaper"
 
     # Normal Packages
+    "snapper"
     "fzf"
     "fd"
     "gvfs"
