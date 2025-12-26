@@ -28,6 +28,10 @@ official_packages=(
     "hyprlauncher"
     "hyprpaper"
 
+    # Terminal
+    "kitty"
+    "alacritty"
+
     # Normal Packages
     "snapper"
     "snap-pac"
@@ -58,7 +62,6 @@ official_packages=(
     "waybar"
     "stow"
     "tmux"
-    "kitty"
     "gcc"
     "helix"
     "vlc"

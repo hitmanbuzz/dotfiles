@@ -5,6 +5,7 @@ CONFIG_DIR="$HOME/.config"
 configs=(
     helix
     hypr
+    alacritty
     waybar
     kitty
     root-configs
