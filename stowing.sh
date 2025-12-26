@@ -10,6 +10,7 @@ configs=(
     root-configs
     tmux
     fastfetch
+    swappy
 )
 
 # Make symlink for all configs
