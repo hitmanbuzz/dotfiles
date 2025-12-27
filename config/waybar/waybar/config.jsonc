@@ -3,7 +3,32 @@
     "spacing": 10,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["cpu", "memory","network", "bluetooth", "pulseaudio", "tray"],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "custom/internet_label",
+        "network",
+        "custom/warp_label",
+        "custom/warp",
+        "pulseaudio",
+        "tray"
+    ],
+    "custom/internet_label": {
+        "format": "I",
+        "tooltip": false
+    },
+    "custom/warp_label": {
+        "format": "W",
+        "tooltip": false
+    },
+
+    "custom/warp": {
+        "format": " ", 
+        "exec": "warp-cli status | grep -q 'Connected' && echo '{\"text\":\" \", \"class\":\"connected\"}' || echo '{\"text\":\" \", \"class\":\"disconnected\"}'",
+        "return-type": "json",
+        "interval": 5,
+        "tooltip": false
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -49,15 +74,6 @@
         "format-disconnected": " ", // Disconnected
         "tooltip-format": "{ifname}: {ipaddr}/{cidr}", // Keeps technical info in tooltip only
         "max-length": 50
-    },
-    "bluetooth": {
-    	"format": " {status}",
-    	"format-connected": " {device_alias}",
-    	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
-    	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-    	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-    	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
     },
     "tooltip": true,
     "format": "<span size='16pt'>{icon}</span>",

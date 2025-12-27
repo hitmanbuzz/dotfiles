@@ -123,5 +123,38 @@ label:focus {
     background-color: #2ecc71;
     color: transparent;
     
-    margin: 8px 10px; /* Adjust top/bottom margin to center vertically */
+    margin: 8px 10px 8px 1px; 
+
+}
+
+#custom-internet_label,
+#custom-warp_label {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    padding-right: 2px; /* Small spacing between letter and circle */
+    margin-right: 0;    /* Pull them closer to the circle */
+}
+
+#custom-warp {
+    padding: 0;
+    min-width: 14px;
+    min-height: 14px;
+    font-size: 1px;
+    border-radius: 50%;
+    
+    margin: 8px 10px 8px 1px; 
+
+    color: transparent;
+    background-color: #2ecc71; /* Default Green (Good) */
+}
+
+/* Red circle when disconnected */
+#custom-warp.disconnected {
+    background-color: #f53c3c;
+}
+
+/* Green circle when connected */
+#custom-warp.connected {
+    background-color: #2ecc71;
 }
