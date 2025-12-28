@@ -24,6 +24,10 @@ official_packages=(
     # Language
     "go"
 
+    # DB
+    "postgresql"
+    "dbeaver"
+
     # Hyprland
     "hyprlauncher"
     "hyprpaper"
@@ -31,6 +35,10 @@ official_packages=(
     # Terminal
     "kitty"
     "alacritty"
+
+    # Container
+    "docker"
+    "docker-compose"
 
     # Normal Packages
     "snapper"
@@ -91,9 +99,8 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 RED='\033[0;31m'
 BLUE='\033[0;34m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
-# Function to check if package is installed
 is_installed() {
     pacman -Qi "$1" &>/dev/null || yay -Qi "$1" &>/dev/null 2>&1
     return $?
@@ -110,7 +117,6 @@ install_package() {
     fi
 }
 
-# Function to install yay
 install_yay() {
     if command -v yay &>/dev/null; then
         echo -e "${GREEN}[✓]${NC} yay is already installed"
@@ -119,10 +125,8 @@ install_yay() {
 
     echo -e "${YELLOW}[→]${NC} Installing yay AUR helper..."
     
-    # Install prerequisites
     sudo pacman -S --needed --noconfirm base-devel git
     
-    # Clone and build yay
     cd /tmp
     git clone https://aur.archlinux.org/yay-bin.git
     cd yay-bin
