@@ -15,6 +15,7 @@ official_packages=(
     "noto-fonts-emoji"
 
     # LSP
+    "python-lsp-server"
     "vscode-html-languageserver"
     "vscode-css-languageserver"
     "typescript-language-server"
