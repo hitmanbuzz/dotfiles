@@ -8,6 +8,8 @@ official_packages=(
     "lutris"
 
     # FONTS
+    "ttf-liberation"
+    "ttf-game-fonts"
     "ttf-jetbrains-mono-nerd"
     "ttf-dejavu"
     "noto-fonts"
