@@ -15,12 +15,12 @@ send_notification() {
 case $1 in
     up)
         # Increase volume
-        pamixer -i 5
+        pamixer -i 3
         send_notification
         ;;
     down)
         # Decrease volume
-        pamixer -d 5
+        pamixer -d 3
         send_notification
         ;;
     mute)
