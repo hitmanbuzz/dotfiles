@@ -13,6 +13,7 @@ configs=(
     tmux
     fastfetch
     swappy
+    i3
 )
 
 # Make symlink for all configs

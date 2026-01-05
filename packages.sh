@@ -5,8 +5,17 @@
 official_packages=(
     # WM
     "i3-wm"
+    "dmenu"
     "picom"
+    "i3status"
+    "feh"
 
+    "flameshot"
+    "dunst"
+    "pamixer"
+    "maim"
+    "drawing"
+    
     # Game
     "steam"
     "lutris"
@@ -85,6 +94,7 @@ official_packages=(
 
 # AUR packages (requires yay)
 aur_packages=(
+    "i3-volume"
     "warp-cli"
 )
 
