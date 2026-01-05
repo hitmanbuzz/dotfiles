@@ -3,6 +3,10 @@
 
 # Official Arch Package
 official_packages=(
+    # WM
+    "i3-wm"
+    "picom"
+
     # Game
     "steam"
     "lutris"
