@@ -1,0 +1,16 @@
+[general]
+# Start with the screen maximized?
+fullscreen = false
+# Hide toolbars by default?
+default-hide-toolbars = false
+# Initial tool to have selected (pointer, crop, line, arrow, text, brush)
+initial-tool = "arrow"
+# Command to run when "Copy" is clicked
+copy-command = "wl-copy"
+
+# Default save location
+output-filename = "~/Pictures/screenshot-%Y-%m-%d_%H:%M:%S.png"
+
+# Action to take after saving (hide, close, quit)
+save-after-copy = true
+

@@ -13,8 +13,7 @@ configs=(
     tmux
     fastfetch
     swappy
-    picom
-    i3
+    satty
 )
 
 # Make symlink for all configs

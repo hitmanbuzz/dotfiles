@@ -3,19 +3,6 @@
 
 # Official Arch Package
 official_packages=(
-    # WM
-    "i3-wm"
-    "dmenu"
-    "picom"
-    "i3status"
-    "feh"
-
-    "flameshot"
-    "dunst"
-    "pamixer"
-    "maim"
-    "drawing"
-    
     # Game
     "steam"
     "lutris"
@@ -57,6 +44,7 @@ official_packages=(
     "docker-compose"
 
     # Normal Packages
+    "satty"
     "snapper"
     "snap-pac"
     "fzf"
@@ -94,7 +82,6 @@ official_packages=(
 
 # AUR packages (requires yay)
 aur_packages=(
-    "i3-volume"
     "warp-cli"
 )
 
