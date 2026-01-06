@@ -13,6 +13,7 @@ configs=(
     tmux
     fastfetch
     swappy
+    picom
     i3
 )
 

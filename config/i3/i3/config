@@ -16,6 +16,7 @@ bindsym $mod+f exec thunar
 bindsym Print exec --no-startup-id flameshot gui
 
 # Start XDG autostart .desktop files using dex. See also
+exec_always --no-startup-id picom -b
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
