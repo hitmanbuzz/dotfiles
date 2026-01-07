@@ -1,20 +1,36 @@
 # **My Arch Linux Dotfiles**
 
-> *My simple arch linux config/dotfiles*
+*My simple arch linux config/dotfiles*
 
-#### NOTE:
-> Run `packages.sh` script first then run `stowing.sh` later.
+-  Enable `mulitlib` in `etc/pacman.conf`
 
-- Enable `mulitlib` in `etc/pacman.conf`
-
-### Install Packages
+## Full Installation
 ```
-chmod +x packages.sh
-./packages.sh
+chmod +x full_install.sh
+./full_install.sh
+```
+
+## Partial Installation
+> Install Packages
+```
+chmod +x scripts/packages.sh
+./scripts/packages.sh
 ```
     
-### Symlink Config
+> Symlink Config
 ```
-chmod +x stowing.sh
-./stowing.sh
+chmod +x scripts/stowing.sh
+./scripts/stowing.sh
+```
+
+> Enable Cloudflare-Warp
+```
+chmod +x scripts/warp_start.sh
+./scripts/warp_start.sh
+```
+
+> Optional Script
+```
+chmod +x scripts/commands.sh
+./scripts/commands.sh
 ```

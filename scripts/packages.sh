@@ -34,9 +34,10 @@ official_packages=(
     # Hyprland
     "hyprlauncher"
     "hyprpaper"
+    "hyprpolkitagent"
+    "waybar"
 
     # Terminal
-    "kitty"
     "alacritty"
 
     # Container
@@ -55,7 +56,6 @@ official_packages=(
     "tumbler"
     "ffmpegthumbnailer"
     "udisks2"
-    "hyprpolkitagent"
     "polkit-gnome"
     "polkit-kde-agent"
     "slurp"
@@ -71,7 +71,6 @@ official_packages=(
     "git"
     "less"
     "firefox"
-    "waybar"
     "stow"
     "tmux"
     "gcc"
@@ -82,6 +81,7 @@ official_packages=(
 
 # AUR packages (requires yay)
 aur_packages=(
+    "microsoft-edge-stable-bin"
     "warp-cli"
 )
 
