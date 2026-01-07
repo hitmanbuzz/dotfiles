@@ -34,3 +34,6 @@ chmod +x scripts/warp_start.sh
 chmod +x scripts/commands.sh
 ./scripts/commands.sh
 ```
+
+## Screenshots
+![Screenshot](./screenshots/screenshot_1.png)
