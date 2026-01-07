@@ -4,10 +4,11 @@
     "type": "file",
     "source": "~/.config/fastfetch/about.txt",
     "color": { "1": "white" },
+    "height": 7,
     "padding": {
       "top": 2,
       "right": 6,
-      "left": 2
+      "left": 2,
     }
   },
   "modules": [
