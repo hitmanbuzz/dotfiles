@@ -42,16 +42,6 @@ name = "jsonc"
 auto-format = false
 indent = { tab-width = 4, unit = "    "}
 
-[[language]]
-name = "css"
-auto-format = false
-indent = { tab-width = 4, unit = "    "}
-
-[[language]]
-name = "html"
-auto-format = false
-indent = { tab-width = 4, unit = "    "}
-
 [language-server.gopls.config]
 gofumpt = false
 
@@ -63,3 +53,35 @@ args = ["127.0.0.1", "6005"]
 name = "gdscript"
 language-servers = ["godot"]
 
+[language-server.tailwindcss-ls]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "html"
+auto-format = false
+language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "css"
+auto-format = false
+language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
+indent = { tab-width = 4, unit = "    "}
+
+[[language]]
+name = "jsx"
+auto-format = false
+language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
+indent = { tab-width = 4, unit = "    "}
+
+[[language]]
+name = "tsx"
+auto-format = false
+language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
+indent = { tab-width = 4, unit = "    "}
+
+[[language]]
+name = "svelte"
+auto-format = false
+language-servers = [ "svelteserver", "tailwindcss-ls" ]
+indent = { tab-width = 4, unit = "    "}
