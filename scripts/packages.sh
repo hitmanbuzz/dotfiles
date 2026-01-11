@@ -32,10 +32,10 @@ official_packages=(
     "dbeaver"
 
     # Hyprland
-    "hyprlauncher"
-    "hyprpaper"
     "hyprpolkitagent"
     "waybar"
+
+    "swaybg"
 
     # Terminal
     "alacritty"
@@ -75,6 +75,7 @@ official_packages=(
     "tmux"
     "gcc"
     "helix"
+    "wofi"
     "vlc"
     "thunar"
 )
