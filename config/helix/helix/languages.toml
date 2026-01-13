@@ -85,3 +85,10 @@ name = "svelte"
 auto-format = false
 language-servers = [ "svelteserver", "tailwindcss-ls" ]
 indent = { tab-width = 4, unit = "    "}
+
+[[language]]
+name = "wgsl"
+auto-format = false
+language-servers = ["wgsl-analyzer"]
+file-types = ["wgsl"]
+indent = { tab-width = 4, unit = "    "}
