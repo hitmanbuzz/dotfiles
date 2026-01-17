@@ -36,6 +36,7 @@ official_packages=(
     "waybar"
 
     "swaybg"
+    "dunst"
 
     # Terminal
     "alacritty"
