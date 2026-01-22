@@ -12,6 +12,7 @@ configs=(
     fontconfig
     tmux
     fastfetch
+    rofi
     swappy
     satty
 )
