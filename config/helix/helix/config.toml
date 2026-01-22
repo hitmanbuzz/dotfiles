@@ -1,4 +1,4 @@
-theme = "rose-pine-dark"
+theme = "gruber-darker"
 
 [editor]
 line-number = "relative"
@@ -8,6 +8,7 @@ auto-format = false
 
 [editor.lsp]
 display-progress-messages = true
+enable = false
 
 [editor.cursor-shape]
 insert = "bar"

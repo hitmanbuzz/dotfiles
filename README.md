@@ -2,7 +2,16 @@
 
 *My simple arch linux config/dotfiles*
 
+### Enable Muti-Lib (Needed):
+
 -  Enable `mulitlib` in `etc/pacman.conf`
+
+### ⚠️ Reminder:
+
+`Hyprland` is not installed by default.
+If you are freshly installing `Arch Linux` then, I recommend you to install `Hyprland` through the `archinstall` script with the appropriate `GPU Driver` (mine is `Nvidia Propietary Driver` for my `RTX 3060 TI`).  
+
+For Display Manager, select `SDDM` as it works properly. Others also works but if you are new then select that option.
 
 ## Full Installation
 ```

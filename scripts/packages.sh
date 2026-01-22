@@ -26,6 +26,7 @@ official_packages=(
 
     # Language
     "go"
+    "gcc"
 
     # DB
     "postgresql"
@@ -34,7 +35,9 @@ official_packages=(
     # Hyprland
     "hyprpolkitagent"
     "waybar"
+    "rofi"
 
+    # Notifications
     "swaybg"
     "dunst"
 
@@ -45,10 +48,15 @@ official_packages=(
     "docker"
     "docker-compose"
 
-    # Normal Packages
+    # Screenshots
     "satty"
+    "grim"
+
+    # BTRFS Snapshots
     "snapper"
     "snap-pac"
+
+    # Other
     "fzf"
     "fd"
     "gvfs"
@@ -59,9 +67,6 @@ official_packages=(
     "udisks2"
     "polkit-gnome"
     "polkit-kde-agent"
-    "slurp"
-    "swappy"
-    "grim"
     "ntfs-3g"
     "gnome-disk-utility"
     "pavucontrol"
@@ -74,9 +79,7 @@ official_packages=(
     "firefox"
     "stow"
     "tmux"
-    "gcc"
     "helix"
-    "wofi"
     "vlc"
     "thunar"
 )
