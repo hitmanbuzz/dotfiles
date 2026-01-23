@@ -60,6 +60,7 @@ official_packages=(
     "fzf"
     "fd"
     "gvfs"
+    "btop"
     "gvfs-afc"
     "thunar-volman"
     "tumbler"
@@ -86,7 +87,7 @@ official_packages=(
 
 # AUR packages (requires yay)
 aur_packages=(
-    "microsoft-edge-stable-bin"
+    # "microsoft-edge-stable-bin"
     "warp-cli"
 )
 
