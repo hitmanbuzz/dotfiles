@@ -7,7 +7,6 @@ configs=(
     hypr
     alacritty
     waybar
-    kitty
     root-configs
     fontconfig
     tmux
