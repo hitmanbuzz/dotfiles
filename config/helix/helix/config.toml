@@ -10,6 +10,9 @@ auto-format = false
 display-progress-messages = true
 # enable = false
 
+[keys.normal.space]
+w = ":w!"
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"

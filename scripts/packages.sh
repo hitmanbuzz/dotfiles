@@ -58,6 +58,8 @@ official_packages=(
     "snap-pac"
 
     # Other
+    "krita"
+    "godot"
     "fzf"
     "fd"
     "gvfs"
