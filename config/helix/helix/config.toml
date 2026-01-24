@@ -10,16 +10,13 @@ auto-format = false
 display-progress-messages = true
 # enable = false
 
-[keys.normal.space]
-w = ":w!"
-
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
 
 [editor.file-picker]
-hidden = false
+hidden = true
 # git-ignore = false
 # git-global = false
 # git-exclude = false

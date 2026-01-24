@@ -92,6 +92,7 @@ official_packages=(
 aur_packages=(
     # "microsoft-edge-stable-bin"
     "warp-cli"
+    "aseprite"
 )
 
 vlc_plugins=(
