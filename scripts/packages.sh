@@ -23,6 +23,7 @@ official_packages=(
     "typescript-language-server"
     "gopls"
     "clang"
+    "nmap"
 
     # Language
     "go"
