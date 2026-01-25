@@ -58,6 +58,8 @@ official_packages=(
     "snap-pac"
 
     # Other
+    "cmake"
+    "ninja"
     "krita"
     "godot"
     "fzf"
