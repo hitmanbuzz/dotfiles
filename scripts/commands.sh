@@ -1,3 +1,3 @@
 #!/bin/bash
 
-git config --global core.editor "hx"
+git config --global core.editor "helix"
