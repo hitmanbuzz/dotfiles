@@ -58,6 +58,7 @@ official_packages=(
     "snap-pac"
 
     # Other
+    "qbittorrent"
     "cmake"
     "ninja"
     "krita"
