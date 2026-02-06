@@ -63,6 +63,7 @@ official_packages=(
     "snap-pac"
 
     # Other
+    "bash-completion"
     "qbittorrent"
     "cmake"
     "ninja"

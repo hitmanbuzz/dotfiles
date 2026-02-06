@@ -17,5 +17,10 @@ PS1='[\u@\h \W]\$ '
 # Bind Ctrl+T to run the sessionizer script
 bind '"\C-t":"tmux-sessionizer\n"'
 
+[[ $PS1 &&
+  ! ${BASH_COMPLETION_VERSINFO:-} &&
+  -f /usr/share/bash-completion/bash_completion ]] &&
+    . /usr/share/bash-completion/bash_completion
+
 export PATH=$PATH:$(go env GOPATH)/bin
 export PATH="$HOME/.local/bin:$PATH"
