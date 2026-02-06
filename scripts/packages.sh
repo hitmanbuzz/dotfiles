@@ -8,6 +8,7 @@ official_packages=(
     "lutris"
 
     # FONTS
+    "font-manager"
     "ttf-liberation"
     "ttf-game-fonts"
     "ttf-jetbrains-mono-nerd"
@@ -15,6 +16,9 @@ official_packages=(
     "noto-fonts"
     "noto-fonts-cjk"
     "noto-fonts-emoji"
+    "inter-font"
+    "ttf-font-awesome"
+    "ttf-noto-nerd"
 
     # LSP
     "python-lsp-server"
@@ -52,6 +56,7 @@ official_packages=(
     # Screenshots
     "satty"
     "grim"
+    "wl-clipboard"
 
     # BTRFS Snapshots
     "snapper"
@@ -96,9 +101,10 @@ official_packages=(
 
 # AUR packages (requires yay)
 aur_packages=(
-    # "microsoft-edge-stable-bin"
     "warp-cli"
     "aseprite"
+    "apple-fonts"
+    "ttf-ms-win11-segoe-ui-variable"
 )
 
 vlc_plugins=(
