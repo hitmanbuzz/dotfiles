@@ -99,12 +99,12 @@ official_packages=(
     "helix"
     "vlc"
     "thunar"
+    "xdg-user-dirs"
 )
 
 # AUR packages (requires yay)
 aur_packages=(
     "warp-cli"
-    "aseprite"
     "apple-fonts"
     "ttf-ms-win11-segoe-ui-variable"
 )
