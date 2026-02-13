@@ -6,6 +6,7 @@ official_packages=(
     # Game
     "steam"
     "lutris"
+    "wine"
 
     # FONTS
     "font-manager"
