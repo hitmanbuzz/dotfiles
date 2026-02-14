@@ -28,6 +28,8 @@ official_packages=(
     "typescript-language-server"
     "gopls"
     "clang"
+    "marksman"
+    "markdown-oxide"
     "nmap"
 
     # Language
@@ -64,6 +66,7 @@ official_packages=(
     "snap-pac"
 
     # Other
+    "inetutils"
     "kate"
     "bash-completion"
     "qbittorrent"
