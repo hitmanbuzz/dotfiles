@@ -28,8 +28,6 @@ official_packages=(
     "typescript-language-server"
     "gopls"
     "clang"
-    "marksman"
-    "markdown-oxide"
     "nmap"
 
     # Language
@@ -74,7 +72,6 @@ official_packages=(
     "cmake"
     "ninja"
     "krita"
-    "godot"
     "fzf"
     "fd"
     "gvfs"
@@ -112,6 +109,7 @@ aur_packages=(
     "warp-cli"
     "apple-fonts"
     "ttf-ms-win11-segoe-ui-variable"
+    "wlogout"
 )
 
 vlc_plugins=(

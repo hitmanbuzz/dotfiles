@@ -1,18 +1,17 @@
 * {
-    font-family: "knight warrior", Roboto;
+    font-family: "DejaVu Sans Mono";
     font-size: 14px;
     letter-spacing: 1.5px;
     min-height: 0;
+    font-weight: bold;
 }
 
 window#waybar {
     background-color: #000000; 
-    
-    border-bottom: 2px solid #1dc706; 
+    border-bottom: 2px solid #ffffff; 
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-    /* font-weight: bold; */
 }
 
 window#waybar.hidden {
@@ -27,9 +26,7 @@ window#waybar.hidden {
     margin: 2px;
     padding-left: 8px;
     padding-right: 8px;
-    background-color: rgba(0, 0, 0, 0.3);
-    font-size: 14px;
-    font-weight: bold;
+    background-color: rgba(0, 0, 0, 1.0);
 }
 
 button {
@@ -57,7 +54,6 @@ button:hover {
 #workspaces button.active {
     color: #f50707;
     background-color: transparent;
-    font-weight: bold;
     border-bottom: 2px solid #f50707; 
 }
 
@@ -92,7 +88,6 @@ button:hover {
 
 #clock {
     font-size: 14px;
-    font-weight: bold;
 }
 
 @keyframes blink {
@@ -130,7 +125,6 @@ label:focus {
 #custom-internet_label,
 #custom-warp_label {
     color: #ffffff;
-    font-weight: bold;
     font-size: 14px;
     padding-right: 2px; /* Small spacing between letter and circle */
     margin-right: 0;    /* Pull them closer to the circle */
@@ -146,7 +140,7 @@ label:focus {
     margin: 8px 10px 8px 1px; 
 
     color: transparent;
-    background-color: #2ecc71; /* Default Green (Good) */
+    background-color: #2ecc71;
 }
 
 /* Red circle when disconnected */
@@ -157,4 +151,16 @@ label:focus {
 /* Green circle when connected */
 #custom-warp.connected {
     background-color: #2ecc71;
+}
+
+#custom-power {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#custom-power:hover {
+    background: inherit;
+    background-color: #027060;
 }

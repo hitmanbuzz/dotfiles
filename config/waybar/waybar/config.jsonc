@@ -1,7 +1,7 @@
 {
-    "height": 24,
+    "height": 26,
     "spacing": 10,
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["custom/power", "hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": [
         "cpu",
@@ -13,6 +13,13 @@
         "pulseaudio",
         "tray"
     ],
+
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "wlogout --protocol layer-shell"  
+    },
+    
     "custom/internet_label": {
         "format": "I",
         "tooltip": false
@@ -29,23 +36,12 @@
         "interval": 5,
         "tooltip": false
     },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
     "tray": {
         "spacing": 10
     },
     "clock": {
         "format": "{:%d %B (%a), %H:%M}",
-        "format-alt": "{:L%d %B W%V %Y}",
         "tooltip": false,
-        "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
     },
     "cpu": {
         "format": "  {usage}%",
