@@ -66,6 +66,7 @@ official_packages=(
     "snap-pac"
 
     # Other
+    "libreoffice-still"
     "inetutils"
     "kate"
     "bash-completion"
