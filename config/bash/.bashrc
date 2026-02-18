@@ -11,6 +11,8 @@ alias hx='helix'
 alias ..="cd .."
 eval "$(starship init bash)"
 alias ll="ls -l"
+alias pkg-install="~/dotfiles/scripts/packages.sh"
+alias config-sym="~/dotfiles/scripts/stowing.sh"
 PS1='[\u@\h \W]\$ '
 . "$HOME/.cargo/env"
 
