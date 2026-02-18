@@ -3,6 +3,7 @@
 CONFIG_DIR="$HOME/.config"
 
 configs=(
+    wlogout
     helix
     hypr
     alacritty
@@ -21,6 +22,8 @@ stow -d config -t "$CONFIG_DIR" "${configs[@]}"
 echo "Config Symlink Done"
 
 # For .bashrc
+rm ~/.bashrc
+echo "Removed default .bashrc file from home dir"
 stow -d config -t "$HOME" bash
 echo ".bashrc Symlink Done"
 
