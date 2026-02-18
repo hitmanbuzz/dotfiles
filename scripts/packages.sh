@@ -103,6 +103,8 @@ official_packages=(
     "vlc"
     "thunar"
     "xdg-user-dirs"
+    "man-db"
+    "man-pages"
 )
 
 # AUR packages (requires yay)
