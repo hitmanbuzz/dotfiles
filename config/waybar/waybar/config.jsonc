@@ -20,14 +20,14 @@
         "on-click": "wlogout --protocol layer-shell"  
     },
     
-    "custom/internet_label": {
-        "format": "I",
-        "tooltip": false
-    },
-    "custom/warp_label": {
-        "format": "W",
-        "tooltip": false
-    },
+    // "custom/internet_label": {
+    //     "format": "I",
+    //     "tooltip": false
+    // },
+    // "custom/warp_label": {
+    //     "format": "W",
+    //     "tooltip": false
+    // },
 
     "custom/warp": {
         "format": " ", 
@@ -44,10 +44,12 @@
         "tooltip": false,
     },
     "cpu": {
-        "format": "  {usage}%",
+        "format": " {usage}%",
     },
     "memory": {
-        "format": "  {}%"
+        "interval": 5,
+        "format": " {used:0.1f}/{total:0.1f}G",
+        "tooltip-format": "{percentage}%"
     },
     "pulseaudio": {
         "scroll-step": 5,

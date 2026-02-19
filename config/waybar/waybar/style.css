@@ -1,14 +1,14 @@
 * {
-    font-family: "DejaVu Sans Mono";
+    font-family: "JetBrainsMono Nerd Font Mono";
     font-size: 14px;
     letter-spacing: 1.5px;
     min-height: 0;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 window#waybar {
-    background-color: #000000; 
-    border-bottom: 2px solid #ffffff; 
+    background: rgba(0, 0, 0, 1.0);
+    border-bottom: 2px solid #0d941b;
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -26,7 +26,6 @@ window#waybar.hidden {
     margin: 2px;
     padding-left: 8px;
     padding-right: 8px;
-    background-color: rgba(0, 0, 0, 1.0);
 }
 
 button {
@@ -41,7 +40,7 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 4px;
+    padding: 0 6px;
     background: transparent;
     color: #ffffff; 
 }
@@ -61,19 +60,34 @@ button:hover {
     background-color: #f50707;
 }
 
-#clock,
 #cpu,
-#memory,
-#network,
-#pulseaudio,
-#wireplumber,
-#tray,
-#mpd {
+#memory {
     margin: 2px;
     padding-left: 4px;
     padding-right: 4px;
-    /* background-color: rgba(0, 0, 0, 0.3); */
-    color: #ffffff;
+    background-color: #0e0c1c;
+    color: #00e1ff;
+}
+#network {
+    margin: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: #0e0c1c;
+    color: #00e1ff;
+}
+#pulseaudio {
+    margin: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: #0e0c1c;
+    color: #91ff00;
+}
+#tray,
+#clock {
+    margin: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: #02f5a5;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -90,67 +104,25 @@ button:hover {
     font-size: 14px;
 }
 
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
-}
-
-label:focus {
-    background-color: #000000;
-}
-
-#network.disconnected {
-    background-color: #f53c3c;
-}
-
-#network {
-    padding: 0;
-
-    min-width: 14px;
-    min-height: 14px;
-    
-    font-size: 1px; 
-    
-    border-radius: 50%;
-    
-    background-color: #2ecc71;
-    color: transparent;
-    
-    margin: 8px 10px 8px 1px; 
-
-}
-
-#custom-internet_label,
-#custom-warp_label {
-    color: #ffffff;
-    font-size: 14px;
-    padding-right: 2px; /* Small spacing between letter and circle */
-    margin-right: 0;    /* Pull them closer to the circle */
-}
-
+#network,   
 #custom-warp {
     padding: 0;
     min-width: 14px;
     min-height: 14px;
     font-size: 1px;
     border-radius: 50%;
-    
+    border:  2px solid #26292b;
     margin: 8px 10px 8px 1px; 
-
     color: transparent;
     background-color: #2ecc71;
 }
 
-/* Red circle when disconnected */
-#custom-warp.disconnected {
+#network.disconnected {
     background-color: #f53c3c;
 }
 
-/* Green circle when connected */
-#custom-warp.connected {
-    background-color: #2ecc71;
+#custom-warp.disconnected {
+    background-color: #f53c3c;
 }
 
 #custom-power {
@@ -158,9 +130,19 @@ label:focus {
     padding-right: 10px;
     font-size: 20px;
     font-weight: 700;
+    color: #d6b80f;
 }
 
 #custom-power:hover {
     background: inherit;
     background-color: #027060;
 }
+
+/*
+#custom-internet_label,
+#custom-warp_label {
+    color: #ffffff;
+    font-size: 16px;
+    margin-right: 0px;
+}
+*/
