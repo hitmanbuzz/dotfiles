@@ -1,11 +1,11 @@
 [[language]]
 name = "go"
-auto-format = false
+auto-format = true
 indent = { tab-width = 4, unit = "    "}
 
 [[language]]
 name = "rust"
-auto-format = false
+auto-format = true
 indent = { tab-width = 4, unit = "    "}
 
 [[language]]
@@ -61,6 +61,7 @@ args = ["--stdio"]
 name = "html"
 auto-format = false
 language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
+indent = { tab-width = 4, unit = "    "}
 
 [[language]]
 name = "css"

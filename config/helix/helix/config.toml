@@ -1,10 +1,10 @@
-theme = "rose-pine-dark"
+theme = "kanagawa-dragon"
 
 [editor]
 line-number = "relative"
 mouse = true
 true-color = true
-auto-format = false
+auto-format = true
 
 [editor.lsp]
 display-progress-messages = true
