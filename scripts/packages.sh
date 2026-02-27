@@ -65,6 +65,7 @@ official_packages=(
     "snap-pac"
 
     # Other
+    "obsidian"
     "brightnessctl"
     "libreoffice-still"
     "inetutils"
