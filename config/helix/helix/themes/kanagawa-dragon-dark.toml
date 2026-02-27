@@ -1,0 +1,18 @@
+inherits = "kanagawa-dragon"
+
+# Darker background — dragonBlack3 default is #181616, using dragonBlack1 (#12120f) instead
+"ui.background" = { fg = "dragonWhite", bg = "dragonDarker" }
+"ui.popup" = { fg = "dragonWhite", bg = "popupBgLight" }
+
+# Bold functions
+"function" = { fg = "dragonBlue2", modifiers = ["bold"] }
+"function.builtin" = { fg = "dragonRed", modifiers = ["bold"] }
+"function.method" = { fg = "dragonBlue2", modifiers = ["bold"] }
+
+# Dark green comments
+"comment" = { fg = "darkGreen" }
+
+[palette]
+dragonDarker = "#0d0c0c"
+darkGreen = "#3d6b3d"
+popupBgLight = "#23211f"
