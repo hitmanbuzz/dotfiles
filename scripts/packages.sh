@@ -107,14 +107,15 @@ official_packages=(
     "xdg-user-dirs"
     "man-db"
     "man-pages"
+    "gparted"
+    "xorg-xhost"
 )
 
 # AUR packages (requires yay)
 aur_packages=(
     "warp-cli"
-    "apple-fonts"
-    "ttf-ms-win11-segoe-ui-variable"
     "wlogout"
+    "orbit-wifi"
 )
 
 vlc_plugins=(

@@ -10,9 +10,24 @@
         "network",
         "custom/warp_label",
         "custom/warp",
+        "custom/orbit",
+        // "battery",
         "pulseaudio",
         "tray"
     ],
+
+    // Uncomment if you want to see battery
+    // "battery": {
+    //     "status": {
+    //         "warning": 30,
+    //         "critical": 15,
+    //     },
+    //     "format": "{capacity}% {icon}",
+    //     "format-charging": "{capacity}% ",
+    //     "format-plugged": "{capacity}% ",
+    //     "format-alt": "{time} {icon}",
+    //     "format-icons": ["", "", "", "", ""]
+    // },
 
     "custom/power": {
         "format": "⏻",
@@ -20,15 +35,13 @@
         "on-click": "wlogout --protocol layer-shell"  
     },
     
-    // "custom/internet_label": {
-    //     "format": "I",
-    //     "tooltip": false
-    // },
-    // "custom/warp_label": {
-    //     "format": "W",
-    //     "tooltip": false
-    // },
-
+    "custom/orbit": {
+        "exec": "orbit waybar-status",
+        "interval": 10,
+        "on-click": "orbit toggle top-right",
+        "format": "📡"
+    },
+    
     "custom/warp": {
         "format": " ", 
         "exec": "warp-cli status | grep -q 'Connected' && echo '{\"text\":\" \", \"class\":\"connected\"}' || echo '{\"text\":\" \", \"class\":\"disconnected\"}'",
