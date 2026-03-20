@@ -14,12 +14,14 @@ language-servers = ["cmake-language-server"]
 
 [[language]]
 name = "c"
-auto-format = false
+auto-format = true
+formatter = { command = "clang-format", args = ["--style=file"] }
 indent = { tab-width = 4, unit = "    "}
 
 [[language]]
 name = "cpp"
-auto-format = false
+auto-format = true
+formatter = { command = "clang-format", args = ["--style=file"] }
 indent = { tab-width = 4, unit = "    "}
 
 [[language]]

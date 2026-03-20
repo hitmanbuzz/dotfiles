@@ -11,23 +11,22 @@
         "custom/warp_label",
         "custom/warp",
         "custom/orbit",
-        // "battery",
+        "battery",
         "pulseaudio",
         "tray"
     ],
 
-    // Uncomment if you want to see battery
-    // "battery": {
-    //     "status": {
-    //         "warning": 30,
-    //         "critical": 15,
-    //     },
-    //     "format": "{capacity}% {icon}",
-    //     "format-charging": "{capacity}% ",
-    //     "format-plugged": "{capacity}% ",
-    //     "format-alt": "{time} {icon}",
-    //     "format-icons": ["", "", "", "", ""]
-    // },
+    "battery": {
+        "status": {
+            "warning": 30,
+            "critical": 15,
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
 
     "custom/power": {
         "format": "⏻",
