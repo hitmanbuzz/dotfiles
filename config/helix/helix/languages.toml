@@ -95,3 +95,10 @@ auto-format = false
 language-servers = ["wgsl-analyzer"]
 file-types = ["wgsl"]
 indent = { tab-width = 4, unit = "    "}
+
+[[language]]
+name = "glsl"
+auto-format = true
+file-types = ["glsl", "vs", "fs", "vert", "frag", "comp", "geom", "tesc", "tese"]
+language-servers = ["glsl_analyzer"]
+indent = { tab-width = 4, unit = "    "}

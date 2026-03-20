@@ -116,6 +116,7 @@ aur_packages=(
     "warp-cli"
     "wlogout"
     "orbit-wifi"
+    "glsl_analyzer-bin"
 )
 
 vlc_plugins=(
