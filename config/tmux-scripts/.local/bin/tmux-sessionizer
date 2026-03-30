@@ -24,18 +24,18 @@ tmux_running=$(pgrep tmux)
 
 # If tmux isn't running at all, create new session and attach
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s "$session_name" -c "$selected"
+    tmux -u new-session -s "$session_name" -c "$selected"
     exit 0
 fi
 
 # If session doesn't exist, create it (detached)
 if ! tmux has-session -t="$session_name" 2> /dev/null; then
-    tmux new-session -ds "$session_name" -c "$selected"
+    tmux -u new-session -ds "$session_name" -c "$selected"
 fi
 
 # 4. Switch to the session
 if [[ -z $TMUX ]]; then
-    tmux attach-session -t "$session_name"
+    tmux -u attach-session -t "$session_name"
 else
-    tmux switch-client -t "$session_name"
+    tmux -u switch-client -t "$session_name"
 fi
