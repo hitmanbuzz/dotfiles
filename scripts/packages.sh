@@ -56,6 +56,7 @@ official_packages=(
     "docker-compose"
 
     # Screenshots
+    "slurp"
     "satty"
     "grim"
     "wl-clipboard"
