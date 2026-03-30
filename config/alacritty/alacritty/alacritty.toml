@@ -14,7 +14,6 @@ size = 13
 
 [window]
 dynamic_padding = true
-decorations = "None"
 opacity = 1.0
 
 [mouse]
