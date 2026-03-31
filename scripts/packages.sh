@@ -110,6 +110,8 @@ official_packages=(
     "man-pages"
     "gparted"
     "xorg-xhost"
+    "xdg-desktop-portal-hyprland"
+    "xdg-desktop-portal"
 )
 
 # AUR packages (requires yay)

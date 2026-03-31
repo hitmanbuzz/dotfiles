@@ -8,6 +8,8 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias hx='helix'
+alias btop='btop --force-utf'
+alias tmux='tmux -u'
 alias ..="cd .."
 eval "$(starship init bash)"
 alias ll="ls -l"
