@@ -4,7 +4,6 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    # CHANGED HERE:
     # -maxdepth 3: Looks 3 folders deep (adjust this number if you need more depth)
     # -mindepth 1: Skips the root folder itself (e.g., just "/home/user")
     # You can add more paths after ~/Projects if you want
@@ -15,9 +14,23 @@ if [[ -z $selected ]]; then
     exit 0
 fi
 
-# 2. Extract the directory name for the session name
-# This takes the folder name (e.g., "backend") and replaces dots with underscores
-session_name=$(basename "$selected" | tr . _)
+# Ensure we have an absolute path (handles if you pass '.' or a relative path as $1)
+selected=$(realpath "$selected")
+
+# 2. Extract a unique session name based on the path
+# Remove the home directory prefix (if present) to keep the name shorter
+relative_path="${selected/#$HOME/}"
+# Remove leading slash if it exists
+relative_path="${relative_path#/}"
+
+# If the path is empty (e.g., you selected the home directory itself), name it "home"
+if [[ -z "$relative_path" ]]; then
+    session_name="home"
+else
+    # Replace slashes with hyphens, and dots/colons with underscores 
+    # (tmux doesn't like dots or colons in session names)
+    session_name=$(echo "$relative_path" | tr '.:' '_' | tr '/' '-')
+fi
 
 # 3. Check if session exists
 tmux_running=$(pgrep tmux)

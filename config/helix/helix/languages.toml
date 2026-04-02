@@ -91,7 +91,7 @@ indent = { tab-width = 4, unit = "    "}
 
 [[language]]
 name = "wgsl"
-auto-format = false
+auto-format = true
 language-servers = ["wgsl-analyzer"]
 file-types = ["wgsl"]
 indent = { tab-width = 4, unit = "    "}
