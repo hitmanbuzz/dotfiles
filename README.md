@@ -45,5 +45,5 @@ chmod +x scripts/commands.sh
 ```
 
 ## Screenshots
-![Terminal](./screenshots/terminal.png)
-![Desktop](./screenshots/desktop.png)
+![Terminal](./screenshots/1.png)
+![Desktop](./screenshots/2.png)
