@@ -1,107 +1,101 @@
 {
-    "height": 26,
-    "spacing": 10,
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 15,
+    
+    // Modules Layout
     "modules-left": ["custom/power", "hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": [
-        "cpu",
-        "memory",
-        "custom/internet_label",
-        "network",
-        "custom/warp_label",
-        "custom/warp",
-        "custom/orbit",
-        "battery",
-        "pulseaudio",
+        "custom/cpu", 
+        "custom/ram", 
+        "custom/network", 
+        "custom/warp", 
+        "custom/orbit", 
+        "pulseaudio", 
+        "pulseaudio#microphone", 
         "tray"
     ],
 
-    "battery": {
-        "status": {
-            "warning": 30,
-            "critical": 15,
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
-    },
-
+    // LEFT SIDE
     "custom/power": {
         "format": "⏻",
         "tooltip": false,
-        "on-click": "wlogout --protocol layer-shell"  
+        "on-click": "wlogout --protocol layer-shell"
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}"
+    },
+
+    // CENTER
+    "clock": {
+        // Format: 17 April (Friday), 02:25
+        "format": "{:%d %B (%A), %H:%M}",
+        "tooltip": false
+    },
+
+    // RIGHT SIDE
+    "custom/cpu": {
+        "exec": "top -bn1 | grep 'Cpu(s)' | sed 's/.*, *\\([0-9.]*\\)%* id.*/\\1/' | awk '{print 100 - $1}'",
+        "interval": 2,
+        "format": "󰻠 {}%",
+        "tooltip": false
+    },
+
+    "custom/ram": {
+        "exec": "free -h | awk '/^Mem:/ {print $3}'",
+        "interval": 2,
+        "format": "󰍛 {}",
+        "tooltip": false
+    },
+
+    "custom/network": {
+        "exec": "nmcli -t -f STATE general | grep -q 'connected' && echo '{\"text\": \"●\", \"class\": \"up\"}' || echo '{\"text\": \"●\", \"class\": \"down\"}'",
+        "interval": 2,
+        "return-type": "json",
+        "tooltip": false
+    },
+
+    "custom/warp": {
+        "exec": "warp-cli status | grep -q 'Connected' && echo '{\"text\": \"●\", \"class\": \"up\"}' || echo '{\"text\": \"●\", \"class\": \"down\"}'",
+        "interval": 2,
+        "return-type": "json",
+        "tooltip": false
     },
     
     "custom/orbit": {
-        "exec": "orbit waybar-status",
-        "interval": 10,
-        "on-click": "orbit toggle top-right",
-        "format": "📡"
-    },
-    
-    "custom/warp": {
-        "format": " ", 
-        "exec": "warp-cli status | grep -q 'Connected' && echo '{\"text\":\" \", \"class\":\"connected\"}' || echo '{\"text\":\" \", \"class\":\"disconnected\"}'",
-        "return-type": "json",
-        "interval": 5,
-        "tooltip": false
-    },
-    "tray": {
-        "spacing": 10
-    },
-    "clock": {
-        "format": "{:%d %B (%a), %H:%M}",
+        "format": "🌐",
         "tooltip": false,
+        "on-click": "orbit toggle top-right"
     },
-    "cpu": {
-        "format": " {usage}%",
-    },
-    "memory": {
-        "interval": 5,
-        "format": " {used:0.1f}/{total:0.1f}G",
-        "tooltip-format": "{percentage}%"
-    },
+
     "pulseaudio": {
-        "scroll-step": 5,
-        "format": "{icon} {volume}% {format_source}",
-        "format-bluetooth": " {volume}% {format_source}",
-        "format-bluetooth-muted": "  {format_source}",
-        "format-muted": "  {format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
+        "format": "{icon} {volume}%",
+        "format-muted": " {volume}%",
         "format-icons": {
             "default": ["", "", ""]
         },
+        "scroll-step": 5,
         "on-click": "pavucontrol",
-        "on-click-right": "foot -a pw-top pw-top"
+        "on-click-right": "foot -a pw-top pw-top",
+        "tooltip": false
     },
-    "network": {
-        "format": " ",             // Generic connected state
-        "format-wifi": " ",        // WiFi connected
-        "format-ethernet": " ",    // Ethernet connected
-        "format-disconnected": " ", // Disconnected
-        "tooltip-format": "{ifname}: {ipaddr}/{cidr}", // Keeps technical info in tooltip only
-        "max-length": 50
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": " Muted",
+        "on-click": "pavucontrol",
+        "on-click-right": "foot -a pw-top pw-top",
+        "tooltip": false
     },
-    "tooltip": true,
-    "format": "<span size='16pt'>{icon}</span>",
-    "format-icons": {
-      "notification": "󱅫",
-      "none": "󰂜",
-      "dnd-notification": "󰂠",
-      "dnd-none": "󰪓",
-      "inhibited-notification": "󰂛",
-      "inhibited-none": "󰪑",
-      "dnd-inhibited-notification": "󰂛",
-      "dnd-inhibited-none": "󰪑"
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 12
+    }
 }

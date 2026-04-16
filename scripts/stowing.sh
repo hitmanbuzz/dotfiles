@@ -3,7 +3,7 @@
 CONFIG_DIR="$HOME/.config"
 
 configs=(
-    quickshell
+    custom_scripts
     wlogout
     helix
     hypr

@@ -15,7 +15,8 @@ eval "$(starship init bash)"
 alias ll="ls -l"
 alias pkg-install="~/dotfiles/scripts/packages.sh"
 alias config-sym="~/dotfiles/scripts/stowing.sh"
-alias vid-comp="~/dotfiles/scripts/video.sh"
+alias vid-comp="~/.config/custom_scripts/video.sh"
+alias ytd="~/.config/custom_scripts/ytd-h264.sh"
 PS1='[\u@\h \W]\$ '
 . "$HOME/.cargo/env"
 

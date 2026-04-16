@@ -112,7 +112,7 @@ official_packages=(
     "xorg-xhost"
     "xdg-desktop-portal-hyprland"
     "xdg-desktop-portal"
-    "quickshell"
+    "yt-dlp"
 )
 
 # AUR packages (requires yay)
@@ -126,6 +126,7 @@ aur_packages=(
 
 vlc_plugins=(
     "vlc-plugin-ffmpeg"      # Essential for most codecs
+    "vlc-plugin-dbus"
     "vlc-plugin-fluidsynth"
     "vlc-plugin-gme"
     "vlc-plugin-jack"
