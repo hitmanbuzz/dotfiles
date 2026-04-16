@@ -81,7 +81,6 @@
         },
         "scroll-step": 5,
         "on-click": "pavucontrol",
-        "on-click-right": "foot -a pw-top pw-top",
         "tooltip": false
     },
 
@@ -90,7 +89,6 @@
         "format-source": " {volume}%",
         "format-source-muted": " Muted",
         "on-click": "pavucontrol",
-        "on-click-right": "foot -a pw-top pw-top",
         "tooltip": false
     },
 
