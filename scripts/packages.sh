@@ -99,7 +99,7 @@ official_packages=(
     "unzip"
     "git"
     "less"
-    "firefox"
+    # "firefox"
     "stow"
     "tmux"
     "helix"
@@ -120,6 +120,7 @@ aur_packages=(
     "wlogout"
     "orbit-wifi"
     "glsl_analyzer-bin"
+    "helium-browser-bin"
 )
 
 vlc_plugins=(
