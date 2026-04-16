@@ -112,6 +112,7 @@ official_packages=(
     "xorg-xhost"
     "xdg-desktop-portal-hyprland"
     "xdg-desktop-portal"
+    "quickshell"
 )
 
 # AUR packages (requires yay)
