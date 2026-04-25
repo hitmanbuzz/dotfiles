@@ -26,6 +26,7 @@ official_packages=(
     "vscode-html-languageserver"
     "vscode-css-languageserver"
     "typescript-language-server"
+    "tailwindcss-language-server"
     "lua-language-server"
     "gopls"
     "clang"

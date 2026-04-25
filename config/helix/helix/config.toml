@@ -2,13 +2,13 @@ theme = "kanagawa-dragon-dark"
 
 [editor]
 line-number = "relative"
-mouse = true
+mouse = false
 true-color = true
 auto-format = true
+color-modes = true
 
 [editor.lsp]
 display-progress-messages = true
-# enable = false
 
 [editor.cursor-shape]
 insert = "bar"
@@ -17,10 +17,6 @@ select = "underline"
 
 [editor.file-picker]
 hidden = true
-# git-ignore = false
-# git-global = false
-# git-exclude = false
-# ignore = false
 
 [editor.statusline]
 left = ["mode", "separator", "version-control", "spacer", "separator", "spinner", "file-modification-indicator", "read-only-indicator"]
