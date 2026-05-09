@@ -42,6 +42,7 @@ official_packages=(
     "dbeaver"
 
     # Hyprland
+    "hyprland"
     "hyprpolkitagent"
     "waybar"
     "rofi"
@@ -122,7 +123,7 @@ aur_packages=(
     "warp-cli"
     "wlogout"
     "orbit-wifi"
-    "brave-bin"
+    "helium-browser-bin"
 )
 
 vlc_plugins=(

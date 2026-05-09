@@ -20,6 +20,7 @@ window#waybar {
     color: #e3cd07;
     margin-left: 10px;
     margin-right: 2px; /* Spacing between power and workspaces */
+    font-size: 24px;
 }
 
 /* Workspaces container */
