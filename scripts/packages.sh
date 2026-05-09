@@ -38,6 +38,7 @@ official_packages=(
 
     # DB
     "postgresql"
+    "sqlite"
     "dbeaver"
 
     # Hyprland
@@ -100,7 +101,6 @@ official_packages=(
     "unzip"
     "git"
     "less"
-    # "firefox"
     "stow"
     "tmux"
     "helix"
@@ -111,6 +111,7 @@ official_packages=(
     "man-pages"
     "gparted"
     "xorg-xhost"
+    "xorg-xauth"
     "xdg-desktop-portal-hyprland"
     "xdg-desktop-portal"
     "yt-dlp"
@@ -121,8 +122,7 @@ aur_packages=(
     "warp-cli"
     "wlogout"
     "orbit-wifi"
-    "glsl_analyzer-bin"
-    "helium-browser-bin"
+    "brave-bin"
 )
 
 vlc_plugins=(
