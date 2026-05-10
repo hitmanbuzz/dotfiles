@@ -7,7 +7,7 @@ initial-tool = "arrow"
 copy-command = "wl-copy"
 
 # Default save location
-output-filename = "~/Pictures/screenshot-%Y-%m-%d_%H:%M:%S.png"
+output-filename = "~/Pictures/Screenshot/screenshot-%Y-%m-%d_%H:%M:%S.png"
 
 # Action to take after saving (hide, close, quit)
 save-after-copy = true

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir ~/Pictures/Screenshot
 git config --global core.editor "helix"
 git config --global init.defaultBranch main
 fc-cache -fv
