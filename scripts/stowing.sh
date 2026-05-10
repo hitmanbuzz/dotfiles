@@ -14,7 +14,6 @@ configs=(
     tmux
     fastfetch
     rofi
-    swappy
     satty
 )
 
