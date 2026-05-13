@@ -32,6 +32,7 @@ official_packages=(
     "nmap"
 
     # Language
+    "luajit"
     "go"
     "gcc"
 
