@@ -11,7 +11,6 @@ official_packages=(
     # FONTS
     "font-manager"
     "ttf-liberation"
-    "ttf-game-fonts"
     "ttf-jetbrains-mono-nerd"
     "ttf-dejavu"
     "noto-fonts"
@@ -69,6 +68,7 @@ official_packages=(
     "snap-pac"
 
     # Other
+    "obs-studio"
     "obsidian"
     "brightnessctl"
     "libreoffice-still"
