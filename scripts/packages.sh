@@ -117,6 +117,7 @@ official_packages=(
     "xdg-desktop-portal-hyprland"
     "xdg-desktop-portal"
     "yt-dlp"
+    "libxres"
 )
 
 # AUR packages (requires yay)
