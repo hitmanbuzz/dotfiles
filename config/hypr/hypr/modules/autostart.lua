@@ -2,7 +2,7 @@ local session_display = "WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XD
 
 hl.on("hyprland.start", function()
   hl.exec_cmd("waybar")
-  hl.exec_cmd("swaybg -i ~/.config/hypr/wallpapers/img_1.jpg -m fill")
+  hl.exec_cmd("swaybg -i ~/.config/hypr/wallpapers/img_4.jpg -m fill")
   hl.exec_cmd("systemctl --user start hyprpolkitagent")
   hl.exec_cmd("/usr/lib/gvfsd-hal")
   hl.exec_cmd("dunst")
