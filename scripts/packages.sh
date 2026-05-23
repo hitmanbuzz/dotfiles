@@ -3,6 +3,23 @@
 
 # Official Arch Package
 official_packages=(
+    # WAYLE (bar)
+    "gtk4"
+    "gtk4-layer-shell"
+    "gtksourceview5"
+    "libpulse"
+    "fftw"
+    "libpipewire"
+    "systemd-libs"
+    "bluez"
+    "bluez-utils"
+    "networkmanager"
+    "upower"
+    "power-profiles-daemon"
+    "pipewire"
+    "wireplumber"
+    "pipewire-pulse"
+
     # Game
     "steam"
     "lutris"
@@ -44,7 +61,7 @@ official_packages=(
     # Hyprland
     "hyprland"
     "hyprpolkitagent"
-    "waybar"
+    "waybar" # (using wayle instead of waybar)
     "rofi"
 
     # Notifications
@@ -124,8 +141,8 @@ official_packages=(
 aur_packages=(
     "warp-cli"
     "wlogout"
-    "orbit-wifi"
     "helium-browser-bin"
+    "wayle-bin"
 )
 
 vlc_plugins=(

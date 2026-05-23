@@ -4,6 +4,7 @@ CONFIG_DIR="$HOME/.config"
 
 configs=(
     custom_scripts
+    wayle
     wlogout
     helix
     hypr

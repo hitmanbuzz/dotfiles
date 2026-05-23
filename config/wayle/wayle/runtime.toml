@@ -1,0 +1,39 @@
+[bar]
+scale = 0.67
+rounding = "none"
+
+[[bar.layout]]
+monitor = "*"
+left = ["power", "hyprland-workspaces"]
+center = ["clock"]
+# `notifications` (not `notification`, the wiki either forgot the `s` at the end or they put `s` on the actual code of wayle)
+right = ["netstat", "cpu", "ram", "bluetooth", "network", "volume", "notifications", "systray"]
+
+[modules.hyprland-workspaces]
+icon-gap = 0.5
+workspace-padding = 0.7
+
+[modules.clock]
+format = "%A, %b %d, %Y - %I:%M %p"
+
+[modules.ram]
+format = "{{ used_gib }} GB | {{ total_gib }} GB"
+
+[modules.netstat]
+format = "↓ {{ down_auto }}  -  ↑ {{ up_auto }}"
+
+[modules.power]
+icon-name = "ld-power-symbolic"
+border-show = false
+border-color = "red"
+icon-color = "auto"
+icon-bg-color = "blue"
+left-click = "wlogout --protocol layer-shell"
+
+[styling]
+scale = 0.7
+rounding = "none"
+
+[modules.battery]
+icon-show = false
+label-show = false
