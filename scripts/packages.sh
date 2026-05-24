@@ -96,7 +96,7 @@ official_packages=(
     "qbittorrent"
     "cmake"
     "ninja"
-    "krita"
+    "gimp"
     "fzf"
     "fd"
     "gvfs"
