@@ -135,6 +135,7 @@ official_packages=(
     "xdg-desktop-portal"
     "yt-dlp"
     "libxres"
+    "unrar"
 )
 
 # AUR packages (requires yay)
