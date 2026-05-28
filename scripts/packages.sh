@@ -48,6 +48,7 @@ official_packages=(
     # LSP
     "python-lsp-server"
     "vscode-html-languageserver"
+    "vscode-json-languageserver"
     "vscode-css-languageserver"
     "typescript-language-server"
     "tailwindcss-language-server"
