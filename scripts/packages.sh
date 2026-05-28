@@ -61,7 +61,7 @@ official_packages=(
     # Hyprland
     "hyprland"
     "hyprpolkitagent"
-    "waybar" # (using wayle instead of waybar)
+    # "waybar" # (using wayle instead of waybar)
     "rofi"
 
     # Notifications
@@ -81,7 +81,7 @@ official_packages=(
     "grim"
     "wl-clipboard"
 
-    # BTRFS Snapshots
+    # BTRFS Snapshots (I don't use currently)
     "snapper"
     "snap-pac"
 
@@ -140,10 +140,11 @@ official_packages=(
 
 # AUR packages (requires yay)
 aur_packages=(
-    "warp-cli"
+    # "warp-cli" # optional
     "wlogout"
     "helium-browser-bin"
     "wayle-bin"
+    "proton-cachyos-slr"
 )
 
 vlc_plugins=(
