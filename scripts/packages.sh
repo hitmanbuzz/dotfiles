@@ -24,6 +24,8 @@ official_packages=(
     "steam"
     "lutris"
     "wine"
+    "gamemode"
+    "lib32-gamemode"
 
     # FONTS
     "font-manager"
@@ -36,6 +38,12 @@ official_packages=(
     "inter-font"
     "ttf-font-awesome"
     "ttf-noto-nerd"
+
+    # --- Programming ---
+    "cmake"
+    "ninja"
+    "tmux"
+    "helix"
 
     # LSP
     "python-lsp-server"
@@ -53,10 +61,16 @@ official_packages=(
     "go"
     "gcc"
 
+    # Container
+    "docker"
+    "docker-compose"
+
     # DB
     "postgresql"
     "sqlite"
     "dbeaver"
+    # --- End ---
+
 
     # Hyprland
     "hyprland"
@@ -70,10 +84,6 @@ official_packages=(
 
     # Terminal
     "alacritty"
-
-    # Container
-    "docker"
-    "docker-compose"
 
     # Screenshots
     "slurp"
@@ -94,8 +104,6 @@ official_packages=(
     "kate"
     "bash-completion"
     "qbittorrent"
-    "cmake"
-    "ninja"
     "gimp"
     "fzf"
     "fd"
@@ -121,8 +129,6 @@ official_packages=(
     "git"
     "less"
     "stow"
-    "tmux"
-    "helix"
     "vlc"
     "thunar"
     "xdg-user-dirs"
