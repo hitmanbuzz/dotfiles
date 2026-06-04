@@ -28,6 +28,11 @@ echo "Removed default .bashrc file from home dir"
 stow -d config -t "$HOME" bash
 echo ".bashrc Symlink Done"
 
+rm ~/.zshrc
+echo "Removed default .zshrc file from home dir"
+stow -d config -t "$HOME" zsh
+echo ".zshrc Symlink Done"
+
 # For tmux-sessionizer & other tmux script
 mkdir -p ~/.local/bin
 chmod +x ./config/tmux-scripts/.local/bin/tmux-sessionizer

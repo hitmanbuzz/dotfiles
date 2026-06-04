@@ -1,6 +1,6 @@
 inherits = "kanagawa-dragon"
 
-"ui.background" = { fg = "dragonWhite", bg = "dragonDarker" }
+"ui.background" = { fg = "dragonWhite" }
 "ui.statusline" = { fg = "dragonWhite", bg = "popupBgLight" }
 "ui.popup" = { fg = "dragonWhite", bg = "popupBgLight" }
 

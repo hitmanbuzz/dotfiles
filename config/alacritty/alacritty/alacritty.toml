@@ -3,6 +3,9 @@ import = [
   "themes/themes/github_dark_high_contrast.toml"
 ]
 
+[terminal]
+shell = { program = "/bin/zsh", args = ["-l"] }
+
 [env]
 TERM = "xterm-256color"
 
@@ -14,7 +17,7 @@ size = 13
 
 [window]
 dynamic_padding = true
-opacity = 1.0
+opacity = 0.95
 
 [mouse]
 hide_when_typing = true
