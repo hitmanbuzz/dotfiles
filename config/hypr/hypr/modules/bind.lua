@@ -41,7 +41,11 @@ hl.bind("SUPER + SHIFT + W", hl.dsp.exec_cmd("killall waybar && waybar &"), {
 })
 
 hl.bind("Print", hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | satty --filename -"), {
-  description = "Take Ccreenshot"
+  description = "Take Area Screenshot"
+})
+
+hl.bind("SUPER +  Print", hl.dsp.exec_cmd("grim - | satty --filename -"), {
+  description = "Take Fullscreen Screenshot"
 })
 
 hl.bind("SUPER + P", hl.dsp.window.pseudo())
