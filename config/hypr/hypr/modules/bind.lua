@@ -28,6 +28,10 @@ hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd(POWER_MENU), {
   description = "Open Power Menu"
 })
 
+hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd(EMOJI_PICKER), {
+  description = "Open Emoji Picker"
+})
+
 hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"), {
   description = "Reload Hyprland"
 })

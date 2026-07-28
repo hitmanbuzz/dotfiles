@@ -38,3 +38,6 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# bun completions
+[ -s "/home/hitmanbuzz/.bun/_bun" ] && source "/home/hitmanbuzz/.bun/_bun"

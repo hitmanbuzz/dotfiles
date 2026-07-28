@@ -36,3 +36,19 @@ hl.window_rule({
   center = true,
   size = { 800, 600 },
 })
+
+hl.window_rule({
+  name = "rezy-minimized",
+  match = { class = "Rezy" },
+  float = true,
+  center = true,
+})
+
+hl.window_rule({
+    name = "emoji-picker",
+    match = { class = "emote" },
+    float = true,
+    center = true,
+    pin = true,
+    size = { 400, 200 },
+})

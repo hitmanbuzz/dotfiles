@@ -2,6 +2,13 @@
 name = "go"
 auto-format = true
 indent = { tab-width = 4, unit = "    "}
+language-servers = [ "gopls" ]
+
+[[language]]
+name = "python"
+auto-format = true
+indent = { tab-width = 4, unit = "    "}
+language-servers = [ "pyright" ]
 
 [[language]]
 name = "rust"
