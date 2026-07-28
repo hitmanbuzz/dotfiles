@@ -1,6 +1,6 @@
 [general]
 import = [
-  "themes/themes/github_dark_high_contrast.toml"
+  "themes/themes/ayu_dark.toml"
 ]
 
 [terminal]
@@ -13,11 +13,11 @@ TERM = "xterm-256color"
 normal = { family = "JetBrainsMono Nerd Font Mono", style = "Medium" }
 bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
 italic = { family = "JetBrainsMono Nerd Font Mono", style = "Medium" }
-size = 13
+size = 14
 
 [window]
-dynamic_padding = false
-opacity = 0.95
+dynamic_padding = true
+opacity = 0.9
 
 [mouse]
 hide_when_typing = true

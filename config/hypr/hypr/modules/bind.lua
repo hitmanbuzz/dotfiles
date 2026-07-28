@@ -36,9 +36,9 @@ hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"), {
   description = "Reload Hyprland"
 })
 
-hl.bind("SUPER + SHIFT + W", hl.dsp.exec_cmd("killall waybar && waybar &"), {
-  description = "Kill And Reopen Waybar (Reload waybar)"
-})
+-- hl.bind("SUPER + SHIFT + W", hl.dsp.exec_cmd("killall waybar && waybar &"), {
+--   description = "Kill And Reopen Waybar (Reload waybar)"
+-- })
 
 hl.bind("Print", hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | satty --filename -"), {
   description = "Take Area Screenshot"
