@@ -1,0 +1,66 @@
+[bar]
+scale = 0.6700000166893005
+rounding = "none"
+
+[[bar.layout]]
+monitor = "*"
+show = true
+left = [
+    "dashboard",
+    "hyprland-workspaces",
+]
+center = ["clock"]
+right = [
+    "netstat",
+    "cpu",
+    "ram",
+    "bluetooth",
+    "network",
+    "volume",
+    "notifications",
+    "systray",
+]
+
+[styling]
+scale = 0.699999988079071
+rounding = "none"
+
+[styling.palette]
+bg = "#16161e"
+surface = "#1a1b26"
+elevated = "#292e42"
+fg = "#c0caf5"
+fg-muted = "#a9b1d6"
+primary = "#7aa2f7"
+red = "#f7768e"
+yellow = "#e0af68"
+green = "#9ece6a"
+blue = "#7dcfff"
+
+[modules.battery]
+icon-show = false
+label-show = false
+
+[modules.clock]
+format = "%A, %b %d, %Y - %I:%M %p"
+
+[modules.dashboard]
+icon-bg-color = "#3584e4"
+
+[modules.hyprland-workspaces]
+icon-gap = 0.5
+workspace-padding = 0.699999988079071
+active-color = "#ed333b"
+
+[modules.netstat]
+format = "↓ {{ down_auto }}  -  ↑ {{ up_auto }}"
+
+[modules.power]
+icon-name = "ld-power-symbolic"
+border-color = "red"
+icon-color = "auto"
+icon-bg-color = "blue"
+left-click = "wlogout --protocol layer-shell"
+
+[modules.ram]
+format = "{{ used_gib }} GB | {{ total_gib }} GB"

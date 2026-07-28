@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "hitmanbuzz",
+  "sym_paths": [
+    {
+      "name": "alacritty",
+      "original_path": "~/dotfiles/config_clone/alacritty",
+      "target_path": "~/.config",
+      "description": "Terminal Emulator"
+    },
+    {
+      "name": "helix",
+      "original_path": "~/dotfiles/config_clone/helix",
+      "target_path": "~/.config",
+      "description": "Terminal Text Editor"
+    },
+    {
+      "name": "wayle",
+      "original_path": "~/dotfiles/config_clone/wayle",
+      "target_path": "~/.config",
+      "description": "GTK based Wayland Bar"
+    },
+    {
+      "name": "satty",
+      "original_path": "~/dotfiles/config_clone/satty",
+      "target_path": "~/.config",
+      "description": "Image View/Editor"
+    }
+  ]
+}

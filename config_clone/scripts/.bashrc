@@ -1,0 +1,29 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias hx='helix'
+alias btop='btop --force-utf'
+alias tmux='tmux -u'
+alias ..="cd .."
+eval "$(starship init bash)"
+alias ll="ls -l"
+alias pkg-install="~/dotfiles/scripts/packages.sh"
+alias config-sym="~/dotfiles/scripts/stowing.sh"
+alias vid-comp="~/.config/custom_scripts/video.sh"
+alias ytd="~/.config/custom_scripts/ytd-h264.sh"
+PS1='[\u@\h \W]\$ '
+. "$HOME/.cargo/env"
+
+# Bind Ctrl+T to run the sessionizer script
+bind '"\C-t":"tmux-sessionizer\n"'
+
+export PATH=$PATH:$(go env GOPATH)/bin
+export PATH="$HOME/.local/bin:$PATH"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

@@ -1,0 +1,6 @@
+inherits = "nord-night"
+
+# [palette]
+# base = "#030303"  # Very dark gray
+
+"ui.background" = { bg = "#191D24" }

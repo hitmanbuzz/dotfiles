@@ -1,0 +1,99 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 15,
+    
+    // Modules Layout
+    "modules-left": ["custom/power", "hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": [
+        "custom/cpu", 
+        "custom/ram", 
+        "custom/network", 
+        "custom/warp", 
+        "custom/orbit", 
+        "pulseaudio", 
+        "pulseaudio#microphone", 
+        "tray"
+    ],
+
+    // LEFT SIDE
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "wlogout --protocol layer-shell"
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}"
+    },
+
+    // CENTER
+    "clock": {
+        // Format: 17 April (Friday), 02:25
+        "format": "{:%d %B (%A), %H:%M}",
+        "tooltip": false
+    },
+
+    // RIGHT SIDE
+    "custom/cpu": {
+        "exec": "top -bn1 | grep 'Cpu(s)' | sed 's/.*, *\\([0-9.]*\\)%* id.*/\\1/' | awk '{print 100 - $1}'",
+        "interval": 2,
+        "format": "󰻠 {}%",
+        "tooltip": false
+    },
+
+    "custom/ram": {
+        "exec": "free -h | awk '/^Mem:/ {print $3}'",
+        "interval": 2,
+        "format": "󰍛 {}",
+        "tooltip": false
+    },
+
+    "custom/network": {
+        "exec": "nmcli -t -f STATE general | grep -q 'connected' && echo '{\"text\": \"●\", \"class\": \"up\"}' || echo '{\"text\": \"●\", \"class\": \"down\"}'",
+        "interval": 2,
+        "return-type": "json",
+        "tooltip": false
+    },
+
+    "custom/warp": {
+        "exec": "warp-cli status | grep -q 'Connected' && echo '{\"text\": \"●\", \"class\": \"up\"}' || echo '{\"text\": \"●\", \"class\": \"down\"}'",
+        "interval": 2,
+        "return-type": "json",
+        "tooltip": false
+    },
+    
+    "custom/orbit": {
+        "format": "🌐",
+        "tooltip": false,
+        "on-click": "orbit toggle top-right"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " {volume}%",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": " Muted",
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 12
+    }
+}
