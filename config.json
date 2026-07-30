@@ -4,27 +4,81 @@
   "sym_paths": [
     {
       "name": "alacritty",
-      "original_path": "~/dotfiles/config_clone/alacritty",
+      "original_path": "./config/alacritty",
       "target_path": "~/.config",
       "description": "Terminal Emulator"
     },
     {
+      "name": "bash",
+      "original_path": "./config/scripts/.bashrc",
+      "target_path": "~",
+      "description": "Bash Shell Configuration"
+    },
+    {
+      "name": "zsh",
+      "original_path": "./config/scripts/.zshrc",
+      "target_path": "~",
+      "description": "Zsh Shell Configuration"
+    },
+    {
+      "name": "hyprland",
+      "original_path": "./config/hypr",
+      "target_path": "~/.config",
+      "description": "Hyprland Window Manager"
+    },
+    {
+      "name": "fastfetch",
+      "original_path": "./config/fastfetch",
+      "target_path": "~/.config",
+      "description": "Display System Information"
+    },
+    {
+      "name": "rofi",
+      "original_path": "./config/rofi",
+      "target_path": "~/.config",
+      "description": "Wayland App Launcher"
+    },
+    {
+      "name": "font-config",
+      "original_path": "./config/fontconfig",
+      "target_path": "~/.config",
+      "description": "Font Manager Config"
+    },
+    {
+      "name": "tmux",
+      "original_path": "./config/tmux",
+      "target_path": "~/.config",
+      "description": "Terminal Multiplexer"
+    },
+    {
+      "name": "tmux-sessionizer",
+      "original_path": "./config/scripts/tmux-sessionizer",
+      "target_path": "~/.local/bin",
+      "description": "Tmux Sessionizer Script"
+    },
+    {
       "name": "helix",
-      "original_path": "~/dotfiles/config_clone/helix",
+      "original_path": "./config/helix",
       "target_path": "~/.config",
       "description": "Terminal Text Editor"
     },
     {
       "name": "wayle",
-      "original_path": "~/dotfiles/config_clone/wayle",
+      "original_path": "./config/wayle",
       "target_path": "~/.config",
       "description": "GTK based Wayland Bar"
     },
     {
       "name": "satty",
-      "original_path": "~/dotfiles/config_clone/satty",
+      "original_path": "./config/satty",
       "target_path": "~/.config",
       "description": "Image View/Editor"
+    },
+    {
+      "name": "wlogout",
+      "original_path": "./config/wlogout",
+      "target_path": "~/.config",
+      "description": "Wayland Logout Power Menu"
     }
   ]
 }
