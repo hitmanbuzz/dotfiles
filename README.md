@@ -26,12 +26,6 @@ chmod +x scripts/packages.sh
 ./scripts/packages.sh
 ```
     
-> Symlink Config
-```
-chmod +x scripts/stowing.sh
-./scripts/stowing.sh
-```
-
 > Enable Cloudflare-Warp
 ```
 chmod +x scripts/warp_start.sh

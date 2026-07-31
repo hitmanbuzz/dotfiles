@@ -46,18 +46,18 @@ official_packages=(
 
     # --- Programming ---
     "cmake"
-    "ninja"
+    # "ninja"
     "tmux"
     "helix"
 
     # LSP
-    "python-lsp-server"
-    "vscode-html-languageserver"
-    "vscode-json-languageserver"
-    "vscode-css-languageserver"
-    "typescript-language-server"
-    "tailwindcss-language-server"
-    "lua-language-server"
+    # "python-lsp-server"
+    # "vscode-html-languageserver"
+    # "vscode-json-languageserver"
+    # "vscode-css-languageserver"
+    # "typescript-language-server"
+    # "tailwindcss-language-server"
+    # "lua-language-server"
     "gopls"
     "clang"
     "nmap"
@@ -98,8 +98,8 @@ official_packages=(
     "wl-clipboard"
 
     # BTRFS Snapshots (I don't use currently)
-    "snapper"
-    "snap-pac"
+    # "snapper"
+    # "snap-pac"
 
     # Other
     "obs-studio"
@@ -108,7 +108,6 @@ official_packages=(
     "libreoffice-still"
     "inetutils"
     "kate"
-    "bash-completion"
     "qbittorrent"
     "gimp"
     "fzf"
@@ -129,7 +128,6 @@ official_packages=(
     "gnome-disk-utility"
     "pavucontrol"
     "tree"
-    "starship"
     "fastfetch"
     "unzip"
     "git"
