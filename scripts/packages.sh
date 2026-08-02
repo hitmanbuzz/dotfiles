@@ -117,6 +117,8 @@ official_packages=(
     "btop"
     "gvfs-afc"
     "thunar-volman"
+    "thunar-archive-plugin"
+    "file-roller"
     "tumbler"
     "ffmpegthumbnailer"
     "udisks2"
