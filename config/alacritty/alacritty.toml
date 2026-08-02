@@ -4,7 +4,7 @@ import = [
 ]
 
 [terminal]
-shell = { program = "/bin/zsh", args = ["-l"] }
+shell = { program = "/bin/fish", args = ["-l"] }
 
 [env]
 TERM = "xterm-256color"

@@ -21,9 +21,7 @@ official_packages=(
     "pipewire-pulse"
 
     # Shell
-    "zsh"
-    "zsh-syntax-highlighting"
-    "zsh-autosuggestions"
+    "fish"
 
     # Game
     "steam"
@@ -178,15 +176,6 @@ RED='\033[0;31m'
 BLUE='\033[0;34m'
 NC='\033[0m'
 
-is_omz_installed() {
-    [ -f "$HOME/.oh-my-zsh/oh-my-zsh.sh" ]
-}
-
-install_omz() {
-    echo -e "${YELLOW}[→]${NC} Installing oh-my-zsh..."
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
-}
-
 is_installed() {
     pacman -Qi "$1" &>/dev/null || yay -Qi "$1" &>/dev/null 2>&1
     return $?
@@ -236,13 +225,6 @@ echo -e "${BLUE}=== Installing Official Repository Packages ===${NC}"
 for package in "${official_packages[@]}"; do
     install_package "$package"
 done
-
-# Install oh-my-zsh
-if is_omz_installed; then
-    echo -e "${GREEN}[✓]${NC} oh-my-zsh is already installed"
-else
-    install_omz
-fi
 
 # Install VLC plugins
 echo ""

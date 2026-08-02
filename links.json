@@ -21,6 +21,12 @@
       "description": "Zsh Shell Configuration"
     },
     {
+      "name": "fish",
+      "original_path": "./config/fish",
+      "target_path": "~/.config",
+      "description": "Fish Shell Configuration"
+    },
+    {
       "name": "hyprland",
       "original_path": "./config/hypr",
       "target_path": "~/.config",
