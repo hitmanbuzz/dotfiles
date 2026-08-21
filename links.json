@@ -85,6 +85,12 @@
       "original_path": "./config/wlogout",
       "target_path": "~/.config",
       "description": "Wayland Logout Power Menu"
+    },
+    {
+      "name": "yt-dlp",
+      "original_path": "./config/scripts/ytd-h264.sh",
+      "target_path": "~/.config/custom_scripts",
+      "description": "Youtube Video Downloader"
     }
   ]
 }
