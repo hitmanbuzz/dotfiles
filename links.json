@@ -91,6 +91,12 @@
       "original_path": "./config/scripts/ytd-h264.sh",
       "target_path": "~/.config/custom_scripts",
       "description": "Youtube Video Downloader"
+    },
+    {
+      "name": "video-compressor",
+      "original_path": "./config/scripts/video.sh",
+      "target_path": "~/.config/custom_scripts",
+      "description": "Video Compressor"
     }
   ]
 }
