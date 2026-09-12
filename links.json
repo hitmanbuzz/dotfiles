@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "sym_paths": [
+    {
+      "name": "alacritty",
+      "original_path": "./config/alacritty",
+      "target_path": "~/.config"
+    },
+    {
+      "name": "bash",
+      "original_path": "./config/scripts/.bashrc",
+      "target_path": "~"
+    },
+    {
+      "name": "zsh",
+      "original_path": "./config/scripts/.zshrc",
+      "target_path": "~"
+    },
+    {
+      "name": "fish",
+      "original_path": "./config/fish",
+      "target_path": "~/.config"
+    },
+    {
+      "name": "hyprland",
+      "original_path": "./config/hypr",
+      "target_path": "~/.config"
+    },
+    {
+      "name": "fastfetch",
+      "original_path": "./config/fastfetch",
+      "target_path": "~/.config"
+    },
+    {
+      "name": "rofi",
+      "original_path": "./config/rofi",
+      "target_path": "~/.config"
+    },
+    {
+      "name": "font-config",
+      "original_path": "./config/fontconfig",
+      "target_path": "~/.config"
+    },
+    {
+      "name": "tmux",
+      "original_path": "./config/tmux",
+      "target_path": "~/.config"
+    },
+    {
+      "name": "tmux-sessionizer",
+      "original_path": "./config/scripts/tmux-sessionizer",
+      "target_path": "~/.local/bin"
+    },
+    {
+      "name": "helix",
+      "original_path": "./config/helix",
+      "target_path": "~/.config"
+    },
+    {
+      "name": "wayle",
+      "original_path": "./config/wayle",
+      "target_path": "~/.config"
+    },
+    {
+      "name": "satty",
+      "original_path": "./config/satty",
+      "target_path": "~/.config"
+    },
+    {
+      "name": "wlogout",
+      "original_path": "./config/wlogout",
+      "target_path": "~/.config"
+    },
+    {
+      "name": "yt-dlp",
+      "original_path": "./config/scripts/ytd-h264.sh",
+      "target_path": "~/.config/custom_scripts"
+    },
+    {
+      "name": "video-compressor",
+      "original_path": "./config/scripts/video.sh",
+      "target_path": "~/.config/custom_scripts"
+    }
+  ]
+}
