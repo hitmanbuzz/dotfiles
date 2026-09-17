@@ -1,6 +1,6 @@
 -- Set global variable that is expose throughout hyprland config
 
-TERMINAL = "alacritty"
+TERMINAL = "foot"
 BROWSER = "helium-browser"
 FILE_MANAGER = "thunar"
 LAUNCHER = "rofi -show drun"

@@ -7,6 +7,11 @@
       "target_path": "~/.config"
     },
     {
+      "name": "foot",
+      "original_path": "./config/foot",
+      "target_path": "~/.config"
+    },
+    {
       "name": "bash",
       "original_path": "./config/scripts/.bashrc",
       "target_path": "~"

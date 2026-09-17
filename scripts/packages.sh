@@ -43,7 +43,7 @@ official_packages=(
     "ttf-noto-nerd"
 
     # --- Programming ---
-    "cmake"
+    # "cmake"
     # "ninja"
     "tmux"
     "helix"
@@ -88,6 +88,7 @@ official_packages=(
 
     # Terminal
     "alacritty"
+    "foot"
 
     # Screenshots
     "slurp"
