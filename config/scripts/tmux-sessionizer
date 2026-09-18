@@ -1,54 +1,55 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
-# 1. Select directory using fzf
-if [[ $# -eq 1 ]]; then
-    selected=$1
+# 1. Select directory
+if test (count $argv) -eq 1
+    set selected $argv[1]
 else
-    # -maxdepth 3: Looks 3 folders deep (adjust this number if you need more depth)
-    # -mindepth 1: Skips the root folder itself (e.g., just "/home/user")
-    # You can add more paths after ~/Projects if you want
-    selected=$(find ~/ ~/Projects -mindepth 1 -maxdepth 3 -type d 2> /dev/null | fzf)
-fi
+    set selected (
+        find ~/ ~/Projects \
+            -mindepth 1 \
+            -maxdepth 3 \
+            -type d 2>/dev/null |
+        fzf --reverse
+    )
+end
 
-if [[ -z $selected ]]; then
+# Nothing selected
+if test -z "$selected"
     exit 0
-fi
+end
 
-# Ensure we have an absolute path (handles if you pass '.' or a relative path as $1)
-selected=$(realpath "$selected")
 
-# 2. Extract a unique session name based on the path
-# Remove the home directory prefix (if present) to keep the name shorter
-relative_path="${selected/#$HOME/}"
-# Remove leading slash if it exists
-relative_path="${relative_path#/}"
+# 2. Create session name from path
+# Make sure the path is absolute
+set selected (realpath "$selected")
 
-# If the path is empty (e.g., you selected the home directory itself), name it "home"
-if [[ -z "$relative_path" ]]; then
-    session_name="home"
+if test "$selected" = "$HOME"
+    set session_name home
 else
-    # Replace slashes with hyphens, and dots/colons with underscores 
-    # (tmux doesn't like dots or colons in session names)
-    session_name=$(echo "$relative_path" | tr '.:' '_' | tr '/' '-')
-fi
+    # Remove the home directory prefix
+    set relative_path (string replace -- "$HOME/" "" "$selected")
 
-# 3. Check if session exists
-tmux_running=$(pgrep tmux)
+    # Replace:
+    #   . and : → _
+    #   /       → -
+    set session_name "$relative_path"
+    set session_name (string replace -a '.' '_' "$session_name")
+    set session_name (string replace -a ':' '_' "$session_name")
+    set session_name (string replace -a '/' '-' "$session_name")
+end
 
-# If tmux isn't running at all, create new session and attach
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux -u new-session -s "$session_name" -c "$selected"
-    exit 0
-fi
 
-# If session doesn't exist, create it (detached)
-if ! tmux has-session -t="$session_name" 2> /dev/null; then
-    tmux -u new-session -ds "$session_name" -c "$selected"
-fi
+# 3. Create session if it doesn't exist
+if not tmux has-session -t "$session_name" 2>/dev/null
+    tmux -u new-session \
+        -ds "$session_name" \
+        -c "$selected"
+end
 
-# 4. Switch to the session
-if [[ -z $TMUX ]]; then
+
+# 4. Attach or switch
+if test -z "$TMUX"
     tmux -u attach-session -t "$session_name"
 else
     tmux -u switch-client -t "$session_name"
-fi
+end

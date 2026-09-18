@@ -57,6 +57,16 @@
       "target_path": "~/.local/bin"
     },
     {
+      "name": "tmux-session-picker",
+      "original_path": "./config/scripts/tmux-session-picker",
+      "target_path": "~/.local/bin"
+    },
+    {
+      "name": "tmux-session-list",
+      "original_path": "./config/scripts/tmux-session-list",
+      "target_path": "~/.local/bin"
+    },
+    {
       "name": "helix",
       "original_path": "./config/helix",
       "target_path": "~/.config"

@@ -1,0 +1,16 @@
+#!/usr/bin/env fish
+
+set selected (
+    tmux-session-list |
+    fzf \
+        --reverse \
+        --header 'Jump to Session  |  Ctrl-X: Kill' \
+        --preview 'tmux capture-pane -pt {}' \
+        --bind 'ctrl-x:execute(tmux kill-session -t {} 2>/dev/null)+reload(tmux-session-list)'
+)
+
+if test -z "$selected"
+    exit 0
+end
+
+tmux switch-client -t "$selected"

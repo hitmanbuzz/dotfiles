@@ -6,7 +6,6 @@ alias grep='grep --color=auto'
 alias hx='helix'
 alias btop='btop --force-utf'
 alias tmux='tmux -u'
-alias ..="cd .."
 alias ll="ls -l"
 alias pkg-install="~/dotfiles/scripts/packages.sh"
 alias config-sym="~/dotfiles/scripts/stowing.sh"
@@ -29,15 +28,13 @@ end
 # local bin
 fish_add_path "$HOME/.local/bin"
 
-# Bun
-set -gx BUN_INSTALL "$HOME/.bun"
-fish_add_path "$BUN_INSTALL/bin"
-
+# TMUX SESSIONIZER
 function tmux_sessionizer_bind
     commandline -r tmux-sessionizer
     commandline -f execute
 end
 
-bind \ct tmux_sessionizer_bind
+# Ctrl-F → sessionizer when outside tmux
+bind \cf tmux_sessionizer_bind
 
 set -g fish_greeting
