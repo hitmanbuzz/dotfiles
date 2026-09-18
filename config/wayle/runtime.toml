@@ -9,7 +9,10 @@ left = [
     "dashboard",
     "hyprland-workspaces",
 ]
-center = ["clock"]
+center = [
+    "clock",
+    "notifications",
+]
 right = [
     "netstat",
     "cpu",
@@ -17,25 +20,12 @@ right = [
     "bluetooth",
     "network",
     "volume",
-    "notifications",
     "systray",
 ]
 
 [styling]
 scale = 0.699999988079071
 rounding = "none"
-
-[styling.palette]
-bg = "#16161e"
-surface = "#1a1b26"
-elevated = "#292e42"
-fg = "#c0caf5"
-fg-muted = "#a9b1d6"
-primary = "#7aa2f7"
-red = "#f7768e"
-yellow = "#e0af68"
-green = "#9ece6a"
-blue = "#7dcfff"
 
 [modules.battery]
 icon-show = false
@@ -55,6 +45,9 @@ active-color = "#ed333b"
 [modules.netstat]
 format = "↓ {{ down_auto }}  -  ↑ {{ up_auto }}"
 
+[modules.notifications]
+popup-position = "top-center"
+
 [modules.power]
 icon-name = "ld-power-symbolic"
 border-color = "red"
@@ -64,3 +57,6 @@ left-click = "wlogout --protocol layer-shell"
 
 [modules.ram]
 format = "{{ used_gib }} GB | {{ total_gib }} GB"
+
+[wallpaper]
+engine-enabled = false
