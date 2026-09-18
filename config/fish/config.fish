@@ -1,12 +1,26 @@
-source /usr/share/cachyos-fish-config/cachyos-config.fish
+# Better man page formatting (need `bat`)
+set -gx MANROFFOPT -c
+set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 # ALIASES
-alias ls='ls --color=auto'
+alias update='yay -Syu'
+alias ..='cd ..'
+alias ls='eza -al --color=always --group-directories-first --icons=always'
+alias la='eza -a --color=always --group-directories-first --icons=always'
+alias ll='eza -l --color=always --group-directories-first --icons=always'
+alias lt='eza -aT --color=always --group-directories-first --icons=always'
+alias l.="eza -a | grep -e '^\.'"
+alias tarnow='tar -acf '
+alias untar='tar -zxvf '
+alias wget='wget -c '
+alias jctl="journalctl -p 3 -xb"
+alias untar='tar -zxvf '
 alias grep='grep --color=auto'
+alias dir='dir --color=auto'
 alias hx='helix'
 alias btop='btop --force-utf'
+alias hw='hwinfo --short'
 alias tmux='tmux -u'
-alias ll="ls -l"
 alias pkg-install="~/dotfiles/scripts/packages.sh"
 alias config-sym="~/dotfiles/scripts/stowing.sh"
 alias vid-comp="~/.config/custom_scripts/video.sh"

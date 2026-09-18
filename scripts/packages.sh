@@ -101,6 +101,9 @@ official_packages=(
     # "snap-pac"
 
     # Other
+    "bat"
+    "hwinfo"
+    "eza"
     "starship"
     "obs-studio"
     "obsidian"
