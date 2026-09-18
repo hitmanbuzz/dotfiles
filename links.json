@@ -67,6 +67,11 @@
       "target_path": "~/.local/bin"
     },
     {
+      "name": "starship",
+      "original_path": "./config/root-configs/starship.toml",
+      "target_path": "~/.config"
+    },
+    {
       "name": "helix",
       "original_path": "./config/helix",
       "target_path": "~/.config"

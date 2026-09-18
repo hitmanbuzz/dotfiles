@@ -101,6 +101,7 @@ official_packages=(
     # "snap-pac"
 
     # Other
+    "starship"
     "obs-studio"
     "obsidian"
     "brightnessctl"
