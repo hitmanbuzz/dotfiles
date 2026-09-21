@@ -2,6 +2,8 @@
 set -gx MANROFFOPT -c
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
+bind \cd ''
+
 # ALIASES
 alias update='yay -Syu'
 alias ..='cd ..'
