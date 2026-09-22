@@ -13,6 +13,8 @@ If you are freshly installing `Arch Linux` then, I recommend you to install `Hyp
 
 For Display Manager, select `SDDM` as it works properly. Others also works but if you are new then select that option.
 
+**Symlinking Program**: *[Symlinker](https://github.com/hitmanbuzz/symlinker) (Made by Me)*
+
 ## Full Installation
 ```
 chmod +x full_install.sh
