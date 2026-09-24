@@ -7,6 +7,9 @@ true-color = true
 auto-format = true
 color-modes = true
 
+[keys.normal]
+C-r = ":reload-all"
+
 [editor.lsp]
 display-progress-messages = true
 
