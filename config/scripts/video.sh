@@ -70,7 +70,7 @@ ffmpeg -i "$INPUT" \
     -c:v h264_nvenc \
     -preset p5 \
     -profile:v high \
-    -level:v 4.1 \
+    -level:v 5.2 \
     -b:v "${VIDEO_KBPS}k" \
     -maxrate "${VIDEO_KBPS}k" \
     -bufsize "$((VIDEO_KBPS * 2))k" \
