@@ -159,7 +159,7 @@ aur_packages=(
     "wlogout"
     "helium-browser-bin"
     "wayle-bin"
-    "proton-cachyos-slr"
+    "protonplus"
 )
 
 vlc_plugins=(
