@@ -27,3 +27,7 @@ hl.device({
     sensitivity = -0.6,
 })
 
+hl.device({
+    name        = "instant-usb-gaming-mouse",
+    sensitivity = -0.6,
+})
