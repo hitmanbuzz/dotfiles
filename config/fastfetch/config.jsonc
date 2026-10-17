@@ -10,7 +10,7 @@
     "padding": {
       "top": 2,
       "right": 6,
-      "left": 2,
+      "left": 2
     }
   },
   "modules": [
@@ -72,12 +72,6 @@
       "text": "version=; echo \"Arch Linux\""
     },
     {
-      "type": "command",
-      "key": "│ ├󰘬",
-      "keyColor": "blue",
-      "text": "branch=$(omarchy-version-branch); echo \"$branch\""
-    },
-    {
       "type": "kernel",
       "key": "│ ├",
       "keyColor": "blue"
@@ -137,6 +131,13 @@
       "type": "uptime",
       "key": "󱫐 Uptime",
       "keyColor": "magenta"
+    },
+    {
+      "type": "command",
+      "key": "⚠ Last Update",
+      "keyColor": "magenta",
+      // format (date/month/year - Hour:Min AM/PM)
+      "text": "stat -c %y /var/log/pacman.log | xargs -I {} date -d \"{}\" +\"%d/%m/%Y - %I:%M %p\""
     },
     {
       "type": "custom",
