@@ -7,4 +7,4 @@ chmod +x ./symlinker
 source ./scripts/packages.sh
 source ./scripts/commands.sh
 
-./symlinker ./links.json
+./symlinker-linux-amd64 ./links.json
