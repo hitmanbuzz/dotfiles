@@ -49,7 +49,7 @@ official_packages=(
     "helix"
 
     # LSP
-    # "python-lsp-server"
+    # "pyright"
     # "vscode-html-languageserver"
     # "vscode-json-languageserver"
     # "vscode-css-languageserver"
@@ -78,11 +78,12 @@ official_packages=(
 
     # Hyprland
     "hyprland"
+    "hyprshutdown"
     "hyprpolkitagent"
     # "waybar" # (using wayle instead of waybar)
     "rofi"
 
-    # Notifications
+    # Notifications / Wallpaper
     "swaybg"
     "dunst"
 

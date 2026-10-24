@@ -1,7 +1,8 @@
 [bar]
 scale = 0.6700000166893005
 bg = "transparent"
-rounding = "none"
+button-label-size = 1.100000023841858
+button-label-weight = "bold"
 
 [[bar.layout]]
 monitor = "*"
@@ -10,10 +11,7 @@ left = [
     "dashboard",
     "hyprland-workspaces",
 ]
-center = [
-    "window-title",
-    "clock",
-]
+center = ["clock"]
 right = [
     "netstat",
     "cpu",
@@ -50,6 +48,7 @@ format = "%A, %b %d, %Y - %I:%M %p"
 
 [modules.dashboard]
 icon-bg-color = "#3584e4"
+dropdown-logout-command = "hyprshutdown --vt 2"
 
 [modules.hyprland-workspaces]
 icon-gap = 0.5
