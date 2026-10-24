@@ -44,5 +44,4 @@ chmod +x scripts/commands.sh
 ![Desktop](./screenshots/1.png)
 ![Launcher](./screenshots/2.png)
 ![Power-Menu](./screenshots/3.png)
-![Calendar](./screenshots/4.png)
-![Terminal](./screenshots/5.png)
+![Terminal](./screenshots/4.png)
