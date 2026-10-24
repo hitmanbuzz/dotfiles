@@ -11,3 +11,6 @@ sudo usermod -aG gamemode $USER
 
 export WAYLAND_DISPLAY=wayland-1
 export XDG_RUNTIME_DIR=/run/user/$(id -u)
+
+chmod +x ../config/qylock/sddm.sh
+../config/qylock/sddm.sh

@@ -1,0 +1,4 @@
+[submodule "config/qylock"]
+	path = config/qylock
+	url = https://github.com/Darkkal44/qylock.git
+	shallow = true
