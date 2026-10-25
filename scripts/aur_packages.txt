@@ -1,0 +1,4 @@
+wlogout
+helium-browser-bin
+wayle-bin
+protonplus

@@ -18,26 +18,20 @@ For Display Manager, select `SDDM` as it works properly. Others also works but i
 ## Full Installation
 ```
 chmod +x full_install.sh
-./full_install.sh
+./install.sh
 ```
 
-## Partial Installation
+## Partial Installation (Need fish)
 > Install Packages
 ```
-chmod +x scripts/packages.sh
-./scripts/packages.sh
+chmod +x scripts/packages.fish
+./scripts/packages.fish
 ```
     
-> Enable Cloudflare-Warp
+> Config Script
 ```
-chmod +x scripts/warp_start.sh
-./scripts/warp_start.sh
-```
-
-> Optional Script
-```
-chmod +x scripts/commands.sh
-./scripts/commands.sh
+chmod +x scripts/config.fish
+./scripts/config.fish
 ```
 
 ## Screenshots

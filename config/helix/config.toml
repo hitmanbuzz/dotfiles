@@ -9,6 +9,8 @@ color-modes = true
 
 [keys.normal]
 C-r = ":reload-all"
+C-f = ":sh tmux display-popup -E -w 80%% -h 80%% 'fish -ic tmux-sessionizer'"
+C-s = ":sh tmux display-popup -E -w 150 -h 30 'fish -ic tmux-session-picker'"
 
 [editor.lsp]
 display-progress-messages = true

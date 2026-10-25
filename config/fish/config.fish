@@ -16,17 +16,12 @@ alias tarnow='tar -acf '
 alias untar='tar -zxvf '
 alias wget='wget -c '
 alias jctl="journalctl -p 3 -xb"
-alias untar='tar -zxvf '
 alias grep='grep --color=auto'
 alias dir='dir --color=auto'
 alias hx='helix'
 alias btop='btop --force-utf'
 alias hw='hwinfo --short'
 alias tmux='tmux -u'
-alias pkg-install="~/dotfiles/scripts/packages.sh"
-alias config-sym="~/dotfiles/scripts/stowing.sh"
-alias vid-comp="~/.config/custom_scripts/video.sh"
-alias ytd="~/.config/custom_scripts/ytd-h264.sh"
 
 # ENVIRONMENT VARIABLES
 # cargo
@@ -49,6 +44,14 @@ function tmux_sessionizer_bind
     commandline -r tmux-sessionizer
     commandline -f execute
 end
+
+function tmux_picker_bind
+    tmux-session-picker
+    commandline -f repaint
+end
+
+# Override Fish's default Ctrl-S (pager-toggle-search)
+bind \cs tmux_picker_bind
 
 # Ctrl-F → sessionizer when outside tmux
 bind \cf tmux_sessionizer_bind
