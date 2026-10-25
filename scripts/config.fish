@@ -10,6 +10,9 @@ sudo systemctl enable --now bluetooth NetworkManager upower power-profiles-daemo
 systemctl --user enable --now gamemoded
 sudo usermod -aG gamemode $USER
 
+systemctl --user daemon-reload
+systemctl --user enable --now skwd-walld.service
+
 echo ""
 
 read -P "Setup SDDM Theme (y/n): " setup_sddm

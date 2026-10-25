@@ -2,3 +2,5 @@ wlogout
 helium-browser-bin
 wayle-bin
 protonplus
+skwd-wall-v2-bin
+skwd-lens-bin

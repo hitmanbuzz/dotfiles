@@ -5,6 +5,13 @@ hl.monitor({
   scale = 1,
 })
 
+hl.monitor({
+  output = "HDMI-A-1",
+  mode = "1920x1080@60",
+  position = "1920x0",
+  scale = 1
+})
+
 hl.workspace_rule({
   workspace = "1",
   monitor = "DP-3",

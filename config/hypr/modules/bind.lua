@@ -4,7 +4,7 @@ hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(TERMINAL), {
   description = "Open Terminal"
 })
 
-hl.bind("SUPER + W", hl.dsp.window.close(), {
+hl.bind("SUPER + Q", hl.dsp.window.close(), {
   description = "Kill Focus window"
 })
 
@@ -24,21 +24,17 @@ hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(LAUNCHER), {
   description = "Open App Launcher"
 })
 
-hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd(POWER_MENU), {
-  description = "Open Power Menu"
+hl.bind("SUPER +  W", hl.dsp.exec_cmd(WALLPAPER_PICKER), {
+  description = "Open Skwd Wallpaper Picker"
 })
 
-hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd(EMOJI_PICKER), {
-  description = "Open Emoji Picker"
+hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd(POWER_MENU), {
+  description = "Open Power Menu"
 })
 
 hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"), {
   description = "Reload Hyprland"
 })
-
--- hl.bind("SUPER + SHIFT + W", hl.dsp.exec_cmd("killall waybar && waybar &"), {
---   description = "Kill And Reopen Waybar (Reload waybar)"
--- })
 
 hl.bind("Print", hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | satty --filename -"), {
   description = "Take Area Screenshot"
@@ -74,8 +70,8 @@ hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_S
 hl.bind("XF86MonBrightnessUp",  hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),                  { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"),                  { locked = true, repeating = true })
 
-hl.bind("ALT + up", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
-hl.bind("ALT + down", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),      { locked = true, repeating = true })
+hl.bind("ALT + W", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
+hl.bind("ALT + S", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),      { locked = true, repeating = true })
 
 hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
