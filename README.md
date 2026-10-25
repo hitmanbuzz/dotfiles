@@ -17,11 +17,18 @@ For Display Manager, select `SDDM` as it works properly. Others also works but i
 
 ## Full Installation
 ```
-chmod +x full_install.sh
+chmod +x install.sh
 ./install.sh
 ```
 
 ## Partial Installation (Need fish)
+
+> Symlink Configs
+```
+chmod +x bin/symlinker-linux-amd64
+./bin/symlinker-linux-amd64 links.json
+```
+
 > Install Packages
 ```
 chmod +x scripts/packages.fish
