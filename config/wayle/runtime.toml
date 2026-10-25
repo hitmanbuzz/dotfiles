@@ -3,6 +3,7 @@ scale = 0.6700000166893005
 bg = "transparent"
 button-label-size = 1.100000023841858
 button-label-weight = "bold"
+dropdown-shadow = false
 
 [[bar.layout]]
 monitor = "*"
@@ -11,7 +12,10 @@ left = [
     "dashboard",
     "hyprland-workspaces",
 ]
-center = ["clock"]
+center = [
+    "clock",
+    "notifications",
+]
 right = [
     "netstat",
     "cpu",
@@ -19,13 +23,11 @@ right = [
     "bluetooth",
     "network",
     "volume",
-    "notifications",
     "systray",
 ]
 
 [styling]
-scale = 0.699999988079071
-rounding = "none"
+scale = 0.8999999761581421
 
 [styling.palette]
 bg = "#16161e"
@@ -59,7 +61,9 @@ active-color = "#ed333b"
 format = "↓ {{ down_auto }}  -  ↑ {{ up_auto }}"
 
 [modules.notifications]
+icon-source = "application"
 popup-position = "top-center"
+popup-monitor = "DP-3"
 
 [modules.power]
 icon-name = "ld-power-symbolic"
@@ -70,6 +74,12 @@ left-click = "wlogout --protocol layer-shell"
 
 [modules.ram]
 format = "{{ used_gib }} GB | {{ total_gib }} GB"
+
+[modules.volume]
+dropdown-app-icons = "native"
+
+[osd]
+monitor = "DP-3"
 
 [wallpaper]
 engine-enabled = false
