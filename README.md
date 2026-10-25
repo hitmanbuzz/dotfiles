@@ -17,6 +17,8 @@ For Display Manager, select `SDDM` as it works properly. Others also works but i
 
 ## Full Installation
 ```
+git clone --recurse-submodules https://github.com/hitmanbuzz/dotfiles.git
+cd dotfiles
 chmod +x install.sh
 ./install.sh
 ```
