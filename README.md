@@ -43,8 +43,5 @@ chmod +x scripts/config.fish
 ./scripts/config.fish
 ```
 
-## Screenshots
-![Desktop](./screenshots/1.png)
-![Launcher](./screenshots/2.png)
-![Power-Menu](./screenshots/3.png)
-![Terminal](./screenshots/4.png)
+
+https://github.com/user-attachments/assets/2905eea9-e217-406a-a51e-09f369cd8607
