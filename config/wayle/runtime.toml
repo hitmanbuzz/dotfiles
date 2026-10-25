@@ -12,10 +12,7 @@ left = [
     "dashboard",
     "hyprland-workspaces",
 ]
-center = [
-    "clock",
-    "notifications",
-]
+center = ["clock"]
 right = [
     "netstat",
     "cpu",
@@ -23,6 +20,7 @@ right = [
     "bluetooth",
     "network",
     "volume",
+    "notifications",
     "systray",
 ]
 
