@@ -12,16 +12,6 @@
       "target_path": "~/.config"
     },
     {
-      "name": "bash",
-      "original_path": "./config/scripts/.bashrc",
-      "target_path": "~"
-    },
-    {
-      "name": "zsh",
-      "original_path": "./config/scripts/.zshrc",
-      "target_path": "~"
-    },
-    {
       "name": "fish",
       "original_path": "./config/fish",
       "target_path": "~/.config"
@@ -52,21 +42,6 @@
       "target_path": "~/.config"
     },
     {
-      "name": "tmux-sessionizer",
-      "original_path": "./config/scripts/tmux-sessionizer",
-      "target_path": "~/.local/bin"
-    },
-    {
-      "name": "tmux-session-picker",
-      "original_path": "./config/scripts/tmux-session-picker",
-      "target_path": "~/.local/bin"
-    },
-    {
-      "name": "tmux-session-list",
-      "original_path": "./config/scripts/tmux-session-list",
-      "target_path": "~/.local/bin"
-    },
-    {
       "name": "starship",
       "original_path": "./config/root-configs/starship.toml",
       "target_path": "~/.config"
@@ -90,16 +65,6 @@
       "name": "wlogout",
       "original_path": "./config/wlogout",
       "target_path": "~/.config"
-    },
-    {
-      "name": "yt-dlp",
-      "original_path": "./config/scripts/ytd-h264.sh",
-      "target_path": "~/.config/custom_scripts"
-    },
-    {
-      "name": "video-compressor",
-      "original_path": "./config/scripts/video.sh",
-      "target_path": "~/.config/custom_scripts"
     }
   ]
 }
