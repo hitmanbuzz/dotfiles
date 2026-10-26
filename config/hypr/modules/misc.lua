@@ -5,3 +5,9 @@ hl.config({
     },
 })
 
+
+hl.config({
+  cursor = {
+    default_monitor = "DP-3"
+  }
+})

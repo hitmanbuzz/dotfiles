@@ -1,6 +1,5 @@
 hl.on("hyprland.start", function()
   hl.exec_cmd("wayle panel start")
-  -- hl.exec_cmd("swaybg -i " .. WALLPAPER_PATH  .. " -m fill")
   hl.exec_cmd("systemctl --user start hyprpolkitagent")
   hl.exec_cmd("/usr/lib/gvfsd-hal")
   hl.exec_cmd("dunst")

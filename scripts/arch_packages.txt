@@ -13,6 +13,9 @@ power-profiles-daemon
 pipewire
 wireplumber
 pipewire-pulse
+qt6-multimedia
+qt6-5compat
+qt6-declarative
 steam
 lutris
 wine
@@ -42,8 +45,6 @@ hyprland
 hyprshutdown
 hyprpolkitagent
 rofi
-swaybg
-dunst
 foot
 slurp
 satty
