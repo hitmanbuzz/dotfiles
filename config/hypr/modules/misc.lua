@@ -11,3 +11,9 @@ hl.config({
     default_monitor = "DP-3"
   }
 })
+
+hl.config({
+    render = {
+        cm_auto_hdr = 0,
+    },
+})
