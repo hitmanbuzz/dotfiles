@@ -7,6 +7,3 @@ require("modules.monitor")
 require("modules.rule")
 require("modules.misc")
 require("modules.env")
-
-package.path = package.path .. ";" .. os.getenv("HOME") .. "/.config/hypremoji/?.lua"
-require("hypremoji")
