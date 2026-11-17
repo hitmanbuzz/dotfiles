@@ -1,0 +1,95 @@
+#!/bin/bash
+
+#     _               ___
+#    / \   _ __  _ __|_ _|_ __ ___   __ _  __ _  ___
+#   / _ \ | '_ \| '_ \| || '_ ` _ \ / _` |/ _` |/ _ \
+#  / ___ \| |_) | |_) | || | | | | | (_| | (_| |  __/
+# /_/   \_\ .__/| .__/___|_| |_| |_|\__,_|\__, |\___|
+#         |_|   |_|                       |___/
+#  ___       _                       _
+# |_ _|_ __ | |_ ___  __ _ _ __ __ _| |_ ___  _ __
+#  | || '_ \| __/ _ \/ _` | '__/ _` | __/ _ \| '__|
+#  | || | | | ||  __/ (_| | | | (_| | || (_) | |
+# |___|_| |_|\__\___|\__, |_|  \__,_|\__\___/|_|
+#                    |___/
+#
+# Author Andrianos Papamarkou
+# Email: apapamarkou@yahoo.com
+#
+
+SCRIPT_DIR="$(dirname "$(realpath "$0")")"
+
+# Auto-detect if running from git repo or standalone
+if [ ! -d "$SCRIPT_DIR/src" ]; then
+	# Download and extract
+	REPO_URL="https://github.com/apapamarkou/appimage-integrator.git"
+	TEMP_DIR=$(mktemp -d)
+	echo "Downloading appimage-integrator..."
+	git clone "$REPO_URL" "$TEMP_DIR" || {
+		echo "Failed to download"
+		exit 1
+	}
+	trap 'rm -rf "$TEMP_DIR"' EXIT
+fi
+
+# Detect installation mode
+if [ -d "/opt/appimage-integrator" ]; then
+	INSTALL_MODE="system"
+	BIN_DIR="/opt/appimage-integrator"
+	CONFIG_DIR="/etc/appimage-integrator"
+elif [ -d "$HOME/.local/share/appimage-integrator" ]; then
+	INSTALL_MODE="user"
+	BIN_DIR="$HOME/.local/share/appimage-integrator"
+	CONFIG_DIR="$HOME/.config/appimage-integrator"
+elif [ -d "$HOME/.local/bin/appimage-integrator" ]; then
+	# Legacy install path
+	INSTALL_MODE="user"
+	BIN_DIR="$HOME/.local/bin/appimage-integrator"
+	CONFIG_DIR="$HOME/.config/appimage-integrator"
+else
+	INSTALL_MODE="user"
+	BIN_DIR="$HOME/.local/share/appimage-integrator"
+	CONFIG_DIR="$HOME/.config/appimage-integrator"
+fi
+
+# Detect start mode
+if [ -f "$HOME/.config/systemd/user/appimage-integrator.service" ]; then
+	START_MODE="systemd"
+else
+	START_MODE="autostart"
+fi
+
+# Stop service
+if [ "$START_MODE" = "systemd" ]; then
+	if systemctl --user is-active --quiet appimage-integrator.service; then
+		echo "Stopping systemd service"
+		systemctl --user stop appimage-integrator.service
+		systemctl --user disable appimage-integrator.service
+	fi
+	rm -f "$HOME/.config/systemd/user/appimage-integrator.service"
+	systemctl --user daemon-reload
+else
+	rm -f "$HOME/.config/autostart/Appimage-Integrator.desktop"
+fi
+
+# Kill any lingering observer processes
+pids=$(pgrep -f "appimage-integrator-observer" || true)
+if [ -n "$pids" ]; then
+	echo "Stopping Appimage Integrator"
+	kill "$pids" 2>/dev/null || true
+	sleep 2
+	for pid in $pids; do
+		if ps -p "$pid" >/dev/null 2>&1; then
+			kill -9 "$pid" 2>/dev/null || true
+		fi
+	done
+fi
+
+# Remove files
+if [ "$INSTALL_MODE" = "system" ]; then
+	sudo rm -rf "$BIN_DIR" "$CONFIG_DIR"
+else
+	rm -rf "$BIN_DIR" "$CONFIG_DIR"
+fi
+
+echo "Uninstallation complete."

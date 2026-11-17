@@ -23,6 +23,14 @@ chmod +x install.sh
 ./install.sh
 ```
 
+## [AppImage Integrator](https://github.com/apapamarkou/appimage-integrator)
+```
+cd scripts
+cd appimage-integrator-1.0.2
+chmod +x install.sh
+./install.sh
+```
+
 ## Partial Installation (Need fish)
 
 > Symlink Configs

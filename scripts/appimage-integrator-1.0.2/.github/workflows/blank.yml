@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y bats inotify-tools shellcheck
+          curl -sS https://webi.sh/shfmt | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Lint
+        run: make lint
+
+      - name: Test
+        run: make test

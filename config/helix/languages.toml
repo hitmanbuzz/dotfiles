@@ -109,3 +109,9 @@ auto-format = true
 file-types = ["glsl", "vs", "fs", "vert", "frag", "comp", "geom", "tesc", "tese"]
 language-servers = ["glsl_analyzer"]
 indent = { tab-width = 4, unit = "    "}
+
+# [[language]]
+# name = "assembly"
+# auto-format = true
+# file-types = ["asm", "s", "fasm", "nasm", "gas"]
+# indent = { tab-width = 4, unit = "    "}

@@ -1,0 +1,68 @@
+#!/bin/bash
+
+#     _               ___
+#    / \   _ __  _ __|_ _|_ __ ___   __ _  __ _  ___
+#   / _ \ | '_ \| '_ \| || '_ ` _ \ / _` |/ _` |/ _ \
+#  / ___ \| |_) | |_) | || | | | | | (_| | (_| |  __/
+# /_/   \_\ .__/| .__/___|_| |_| |_|\__,_|\__, |\___|
+#         |_|   |_|                       |___/
+#  ___       _                       _
+# |_ _|_ __ | |_ ___  __ _ _ __ __ _| |_ ___  _ __
+#  | || '_ \| __/ _ \/ _` | '__/ _` | __/ _ \| '__|
+#  | || | | | ||  __/ (_| | | | (_| | || (_) | |
+# |___|_| |_|\__\___|\__, |_|  \__,_|\__\___/|_|
+#                    |___/
+#
+# Author Andrianos Papamarkou
+# Email: apapamarkou@yahoo.com
+#
+
+set -euo pipefail
+
+# shellcheck source=src/logging.sh
+source "$(dirname "$0")/logging.sh"
+# shellcheck source=src/notify.sh
+source "$(dirname "$0")/notify.sh"
+
+# Check if an argument was provided
+if [ $# -ne 1 ]; then
+	echo "Usage: $0 <AppImage>"
+	exit 1
+fi
+
+# Wait until the file is finished downloading
+wait_for_file_copy() {
+	local file="$1"
+	local previous_size=0
+	local current_size=0
+	local stable_count=0
+
+	while true; do
+		[ -f "$file" ] || return 1
+		current_size=$(stat -f%z "$file" 2>/dev/null || stat -c%s "$file" 2>/dev/null)
+
+		if [ "$current_size" = "$previous_size" ]; then
+			stable_count=$((stable_count + 1))
+			[ $stable_count -ge 3 ] && break
+		else
+			stable_count=0
+		fi
+
+		previous_size=$current_size
+		sleep 1
+	done
+}
+
+appimage="$1"
+appimage_full_name="${appimage##*/}"
+appimage_name="${appimage_full_name%%.*}"
+
+# Wait for download to complete
+log info "Waiting for download to complete: $appimage_name"
+if ! wait_for_file_copy "$appimage"; then
+	log warn "File disappeared before download completed: $appimage_name"
+	exit 0
+fi
+
+# Notify user with integrate action
+notify "AppImage Integrator" "$appimage_name appeared in Downloads." "Integrate $appimage_name" "mv \"$appimage\" \"$HOME/Applications/\""
